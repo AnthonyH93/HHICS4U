@@ -13,6 +13,7 @@ import java.util.ArrayList;
  *  Date: May 11, 2018
  *  Description:
  */
+
 public class MedicalTestType {
 
     private String name;

@@ -44,13 +44,7 @@
                               </AnchorPane>
                             <AnchorPane fx:id="medicalDataListContainer" minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="188.0">
                                  <children>
-                                    <ListView fx:id="medicalDataListView" fixedCellSize="30.0" layoutY="-7.0" prefHeight="397.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                        <items>
-                                            <FXCollections fx:factory="observableArrayList">
-                                                <String fx:value="item" />
-                                            </FXCollections>
-                                        </items>
-                                    </ListView>
+                                    <ListView fx:id="medicalDataListView" fixedCellSize="30.0" layoutY="-7.0" prefHeight="397.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
                                  </children>
                               </AnchorPane>
                           </items>
@@ -72,13 +66,7 @@
                               </AnchorPane>
                               <AnchorPane fx:id="testDateListContainer" minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="188.0">
                                  <children>
-                                    <ListView fx:id="testDateListView" fixedCellSize="30.0" layoutY="-7.0" prefHeight="397.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <items>
-                                          <FXCollections fx:factory="observableArrayList">
-                                             <String fx:value="item" />
-                                          </FXCollections>
-                                       </items>
-                                    </ListView>
+                                    <ListView fx:id="testDateListView" fixedCellSize="30.0" layoutY="-7.0" prefHeight="397.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
                                  </children>
                               </AnchorPane>
                            </items>

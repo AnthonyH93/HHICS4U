@@ -1,4 +1,5 @@
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -99,14 +100,17 @@ public class MainController implements Initializable{
     @FXML
     private Button addMedicalTestTypeButton;
     
+    public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
+    
     /* Initialize the components */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        medicalDataListView.getItems().add(new MedicalTestType("Iron", "no comment"));
+        medicalDataListView.getItems().setAll(testTypes);
         addMedicalTestTypeButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("clicked");
+                TestFunctions.addMedicalTestType();
+                updateMedicalTestTypeList();
             }
             
         });
@@ -114,6 +118,10 @@ public class MainController implements Initializable{
     
     public void setMedicalDataListView (Collection<? extends String> a) {
         
+    }
+    
+    public void updateMedicalTestTypeList () {
+        medicalDataListView.getItems().setAll(testTypes);
     }
 
 }

@@ -10,6 +10,7 @@
  *  Date: May 11, 2018
  *  Description:
  */
+
 public class MedicalTestResult {
 
     private int day;
