@@ -1,7 +1,6 @@
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -19,15 +18,13 @@ public class MainController implements Initializable{
     @FXML
     private ListView<String> listView;
 
-    
-    public void listClicked(ActionEvent event) {
-        listView.getItems().addAll("hi");
-    }
+    @FXML
+    private ListView<String> medicalDataListView;
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         listView.setItems(FXCollections.observableArrayList("July 3, 2004"));
-        
+        medicalDataListView.setItems(FXCollections.observableArrayList("July 3, 2004"));
     }
 
 }
