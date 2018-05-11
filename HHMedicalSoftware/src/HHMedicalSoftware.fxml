@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
@@ -7,22 +9,19 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
 
-
-<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
    <children>
       <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <top>
-            <Pane prefHeight="75.0" prefWidth="800.0" style="-fx-background-color: grey;" BorderPane.alignment="TOP_CENTER">
+            <Pane prefHeight="75.0" prefWidth="800.0" style="-fx-background-color: black;" BorderPane.alignment="TOP_CENTER">
                <children>
-                  <Label text="H&amp;H MEDICAL SOFTWARE" textFill="WHITE">
-                     <font>
-                        <Font name="Ebrima" size="29.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
-                     </padding>
-                  </Label>
+                  <ImageView fitHeight="47.0" fitWidth="353.0" layoutX="14.0" layoutY="14.0">
+                     <image>
+                        <Image url="@Logo.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
          </top>
@@ -31,26 +30,58 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0">
                      <children>
-                        <TableView AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="Medical Data" />
-                          </columns>
-                           <columnResizePolicy>
-                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                           </columnResizePolicy>
-                        </TableView>
+                        <SplitPane dividerPositions="0.0665083135391924" orientation="VERTICAL" prefHeight="405.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="139.0" prefWidth="188.0" SplitPane.resizableWithParent="false">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="188.0" text="Medical Data" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="188.0">
+                                 <children>
+                                    <ListView fx:id="medicalDataListView" fixedCellSize="20.0" layoutY="-7.0" prefHeight="397.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        <items>
+                                            <FXCollections fx:factory="observableArrayList">
+                                                <String fx:value="item" />
+                                            </FXCollections>
+                                        </items>
+                                    </ListView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
                      </children>
                   </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0">
                      <children>
-                        <TableView AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="Test Dates" />
-                          </columns>
-                           <columnResizePolicy>
-                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                           </columnResizePolicy>
-                        </TableView>
+                        <SplitPane dividerPositions="0.0665083135391924" orientation="VERTICAL" prefHeight="405.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="139.0" prefWidth="188.0" SplitPane.resizableWithParent="false">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="188.0" text="Test Dates" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="188.0">
+                                 <children>
+                                    <ListView fx:id="listView" fixedCellSize="20.0" layoutY="-7.0" prefHeight="397.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <FXCollections fx:factory="observableArrayList">
+                                             <String fx:value="item" />
+                                          </FXCollections>
+                                       </items>
+                                    </ListView>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
                      </children>
                   </AnchorPane>
               </items>
