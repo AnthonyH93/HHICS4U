@@ -19,15 +19,22 @@ import javafx.stage.Stage;
  */
 public class InputMedicalTestDataScreen {
 
+    static Stage stage;
+    
     public InputMedicalTestDataScreen() throws IOException {
         FXMLLoader loader = new FXMLLoader (getClass().getResource("InputMedicalTestDataScreen.fxml"));
         Parent root = loader.load();
         
         Scene scene = new Scene(root, 600, 400);
-        Stage stage = new Stage();
+        stage = new Stage();
         stage.setTitle("HH Medical Software");
         stage.setScene(scene);
         stage.show();
     }
+    
+    public static void close () {
+        stage.close();
+    }
+    
 
 }
