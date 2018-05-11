@@ -24,9 +24,9 @@ public class MainClass extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
        
-        Parent root = FXMLLoader.load(getClass().getResource("HHMedicalSoftware.fxml"));
+        FXMLLoader loader = new FXMLLoader (getClass().getResource("HHMedicalSoftware.fxml"));
+        Parent root = loader.load();
         
-    
         Scene scene = new Scene(root, 800, 500);
     
         primaryStage.setTitle("HH Medical Software");
@@ -34,6 +34,8 @@ public class MainClass extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
         
+        MainController controller = loader.getController();
+        controller.medicalDataListView.getItems().addAll("ehllo" , "yay", "finally");
     }
 
     /**
