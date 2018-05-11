@@ -2,9 +2,12 @@ import java.net.URL;
 import java.util.Collection;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextArea;
@@ -52,7 +55,7 @@ public class MainController implements Initializable{
     private AnchorPane medicalDataLabelContainer;
 
     @FXML
-    public ListView<String> medicalDataListView;
+    public ListView<MedicalTestType> medicalDataListView;
 
     @FXML
     private AnchorPane testResultTextContainer;
@@ -90,16 +93,27 @@ public class MainController implements Initializable{
     @FXML
     private AnchorPane leftContainerPane;
     
+    @FXML
+    private Pane bottomPane;
+
+    @FXML
+    private Button addMedicalTestTypeButton;
     
     /* Initialize the components */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        testDateListView.setItems(FXCollections.observableArrayList("July 3, 2004"));
-        medicalDataListView.setItems(FXCollections.observableArrayList("July 3, 2004"));
+        medicalDataListView.getItems().add(new MedicalTestType("Iron", "no comment"));
+        addMedicalTestTypeButton.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("clicked");
+            }
+            
+        });
     }
     
     public void setMedicalDataListView (Collection<? extends String> a) {
-        medicalDataListView.getItems().setAll(a);
+        
     }
 
 }

@@ -115,6 +115,13 @@
               </items>
             </SplitPane>
          </center>
+         <bottom>
+            <Pane fx:id="bottomPane" prefHeight="45.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="addMedicalTestTypeButton" layoutX="20.0" layoutY="10.0" mnemonicParsing="false" text="Add Medical Test Type" />
+               </children>
+            </Pane>
+         </bottom>
       </BorderPane>
    </children>
 </VBox>
