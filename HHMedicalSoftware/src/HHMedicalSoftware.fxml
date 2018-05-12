@@ -81,11 +81,15 @@
               <items>
                 <AnchorPane fx:id="testResultTextContainer" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Pane fx:id="testResultTextPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <children>
-                              <TextArea fx:id="testResultTextArea" depthTest="DISABLE" editable="false" text="Test" />
-                           </children>
-                        </Pane>
+                        <BorderPane fx:id="testResultTextPane" layoutX="64.0" layoutY="5.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <TextArea fx:id="testResultTextArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </BorderPane.margin>
+                              </TextArea>
+                           </center>
+                        </BorderPane>
                      </children>
                   </AnchorPane>
                 <AnchorPane fx:id="testResultChartContainer" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">

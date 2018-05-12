@@ -33,7 +33,7 @@ public class MainController implements Initializable{
     private BorderPane mainBorderPane;
 
     @FXML
-    private Pane testResultTextPane;
+    private BorderPane testResultTextPane;
 
     @FXML
     private TextField medicalDataLabel;
