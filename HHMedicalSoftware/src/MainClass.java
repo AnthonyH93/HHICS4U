@@ -21,11 +21,12 @@ import javafx.stage.Stage;
  */
 public class MainClass extends Application {
     
+    /* Create variable to hold the controller of the scene */
     public static MainController controller;
     
     @Override
     public void start(Stage primaryStage) throws IOException {
-       
+        /* Create new window from custom fxml template */
         FXMLLoader loader = new FXMLLoader (getClass().getResource("HHMedicalSoftware.fxml"));
         Parent root = loader.load();
         

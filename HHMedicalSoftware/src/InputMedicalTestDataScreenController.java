@@ -27,6 +27,9 @@ import javafx.scene.layout.VBox;
  *  Description:
  */
 public class InputMedicalTestDataScreenController implements Initializable {
+    
+    /* Inject all FXML Components */
+    
     @FXML
     private VBox mainContainer;
 
@@ -62,6 +65,7 @@ public class InputMedicalTestDataScreenController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        /* When button is pressed add data to array and close the window */
         submitButton.setOnAction(new EventHandler<ActionEvent> () {
                 @Override
                 public void handle(ActionEvent event) {
@@ -73,12 +77,13 @@ public class InputMedicalTestDataScreenController implements Initializable {
                 }
                 
             });
+        
+        /* When button is pressed close the window */
         cancelButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
                 InputMedicalTestDataScreen.close();
-            }
-                
+            }  
         });
     }
     

@@ -13,6 +13,7 @@
 
 public class MedicalTestResult {
 
+    /* Create class for medical test results that contains the date and the score */
     private int day;
     private int month;
     private int year;
@@ -41,6 +42,7 @@ public class MedicalTestResult {
         return score;
     }
 
+    /* Override default toString method to instead output string in form "day/month/year" */
     @Override
     public String toString() {
         StringBuilder string = new StringBuilder();

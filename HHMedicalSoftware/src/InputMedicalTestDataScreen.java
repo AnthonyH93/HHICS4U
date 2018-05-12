@@ -21,17 +21,19 @@ public class InputMedicalTestDataScreen {
 
     static Stage stage;
     
+    /* Create new window from custom fxml template */
     public InputMedicalTestDataScreen() throws IOException {
         FXMLLoader loader = new FXMLLoader (getClass().getResource("InputMedicalTestDataScreen.fxml"));
         Parent root = loader.load();
         
         Scene scene = new Scene(root, 600, 400);
         stage = new Stage();
-        stage.setTitle("HH Medical Software");
+        stage.setTitle("Add Medical Test");
         stage.setScene(scene);
         stage.show();
     }
     
+    /* Close window */
     public static void close () {
         stage.close();
     }

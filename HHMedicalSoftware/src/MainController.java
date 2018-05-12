@@ -116,10 +116,7 @@ public class MainController implements Initializable{
         });
     }
     
-    public void setMedicalDataListView (Collection<? extends String> a) {
-        
-    }
-    
+    /* Update list view with current array */
     public void updateMedicalTestTypeList () {
         medicalDataListView.getItems().setAll(testTypes);
     }

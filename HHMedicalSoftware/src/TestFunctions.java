@@ -17,6 +17,7 @@ import java.util.logging.Logger;
  */
 public class TestFunctions {
 
+    /* Create a new InputMedicalTestDataScreen */
     public static void addMedicalTestType () {
         try {
             InputMedicalTestDataScreen screen = new InputMedicalTestDataScreen();
