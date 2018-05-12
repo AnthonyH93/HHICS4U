@@ -93,7 +93,7 @@ public class InputMedicalTestResultScreenController implements Initializable {
                         int year = Integer.parseInt(yearTextField.getText());
                         int score = Integer.parseInt(scoreTextField.getText());
                         MainController.selectedTest.getTests().add(
-                                new MedicalTestResult(day, month, year, score));
+                                new MedicalTestResult(new Date(day, month, year), score));
                         InputMedicalTestResultScreen.close();
                         MainClass.controller.updateData();
                     }
@@ -105,7 +105,7 @@ public class InputMedicalTestResultScreenController implements Initializable {
         cancelButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
-                InputMedicalTestTypeScreen.close();
+                InputMedicalTestResultScreen.close();
             }  
         });
     }

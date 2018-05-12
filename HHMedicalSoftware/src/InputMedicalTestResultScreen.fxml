@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.*?>
 
-<VBox fx:id="mainContainer" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InputMedicalTestResultScreenController">
+<VBox fx:id="mainContainer" prefHeight="264.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InputMedicalTestResultScreenController">
    <children>
-      <BorderPane fx:id="mainBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+      <BorderPane fx:id="mainBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="600.0" VBox.vgrow="ALWAYS">
          <top>
             <Pane fx:id="topBarPane" prefHeight="140.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="TOP_CENTER">
                <children>
@@ -32,7 +32,7 @@
             </Pane>
          </top>
          <bottom>
-            <Pane fx:id="bottomPane" prefHeight="45.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+            <Pane fx:id="bottomPane" prefHeight="46.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="submitButton" layoutX="499.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Submit" />
                   <Button fx:id="cancelButton" layoutX="394.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Cancel" />
@@ -40,60 +40,72 @@
             </Pane>
          </bottom>
          <center>
-            <GridPane fx:id="mainGridPane" BorderPane.alignment="CENTER">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+            <VBox fx:id="gridContainer" prefHeight="96.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="dayLabel" alignment="CENTER" text="Day:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="dayTextField" prefHeight="25.0" prefWidth="188.0" GridPane.columnIndex="1">
-                     <GridPane.margin>
-                        <Insets bottom="5.0" left="5.0" right="50.0" top="5.0" />
-                     </GridPane.margin>
-                  </TextField>
-                  <Label fx:id="monthLabel" alignment="CENTER" text="Month:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="yearLabel" alignment="CENTER" text="Year:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="monthTextField" prefHeight="25.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets bottom="5.0" left="5.0" right="50.0" />
-                     </GridPane.margin>
-                  </TextField>
-                  <TextField fx:id="yearTextField" prefHeight="25.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets bottom="5.0" left="5.0" right="50.0" />
-                     </GridPane.margin>
-                  </TextField>
-                  <Label fx:id="scoreLabel" alignment="CENTER" text="Score:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="scoreTextField" prefHeight="25.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets bottom="5.0" left="5.0" right="50.0" />
-                     </GridPane.margin>
-                  </TextField>
+                  <GridPane fx:id="mainGridPane" prefHeight="90.0" prefWidth="600.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="dayLabel" alignment="CENTER" text="Day:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="scoreLabel" alignment="CENTER" text="Score:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="scoreTextField" prefHeight="25.0" prefWidth="261.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="25.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <HBox fx:id="inputHbox" prefHeight="46.0" prefWidth="372.0" GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                           <children>
+                              <TextField fx:id="dayTextField" prefHeight="25.0" prefWidth="83.0">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="seperator1" prefHeight="25.0" prefWidth="19.0" text=" / ">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="22.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="monthTextField" prefHeight="25.0" prefWidth="82.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="seperator2" prefHeight="26.0" prefWidth="12.0" text=" / " textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="22.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="yearTextField" alignment="CENTER" prefHeight="25.0" prefWidth="75.0">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
                </children>
-            </GridPane>
+            </VBox>
          </center>
       </BorderPane>
    </children>

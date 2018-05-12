@@ -134,7 +134,11 @@ public class MainController implements Initializable{
         medicalDataListView.getItems().setAll(testTypes);
     }
     public void updateMedicalTestResultList () {
-        testDateListView.getItems().setAll(selectedTest.getTests());
+        try {
+            testDateListView.getItems().setAll(selectedTest.getTests());
+        } catch (NullPointerException n) {
+            System.out.print("User has not created any results yet.");
+        }
     }
     
     public void updateData () {
@@ -145,7 +149,6 @@ public class MainController implements Initializable{
     public void medicalTestTypeListClicked (MouseEvent event) {
         selectedTest = medicalDataListView.getSelectionModel().getSelectedItem();
         updateMedicalTestResultList();
-        System.out.println(selectedTest.toString());
     }
 
 }

@@ -14,28 +14,16 @@
 public class MedicalTestResult {
 
     /* Create class for medical test results that contains the date and the score */
-    private int day;
-    private int month;
-    private int year;
+    private Date date;
     private int score;
 
-    public MedicalTestResult(int day, int month, int year, int score) {
-        this.day = day;
-        this.month = month;
-        this.year = year;
+    public MedicalTestResult(Date date, int score) {
+        this.date = date;
         this.score = score;
     }
 
-    public int getDay() {
-        return day;
-    }
-
-    public int getMonth() {
-        return month;
-    }
-
-    public int getYear() {
-        return year;
+    public Date getDate () {
+        return date;
     }
 
     public int getScore() {
@@ -45,9 +33,7 @@ public class MedicalTestResult {
     /* Override default toString method to instead output string in form "day/month/year" */
     @Override
     public String toString() {
-        StringBuilder string = new StringBuilder();
-        string.append(day).append("/").append(month).append("/").append(year);
-        return string.toString();
+        return date.toString();
     }
     
     
