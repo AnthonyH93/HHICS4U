@@ -17,13 +17,13 @@ import javafx.stage.Stage;
  *  Date: May 11, 2018
  *  Description:
  */
-public class InputMedicalTestDataScreen {
+public class InputMedicalTestTypeScreen {
 
     static Stage stage;
     
     /* Create new window from custom fxml template */
-    public InputMedicalTestDataScreen() throws IOException {
-        FXMLLoader loader = new FXMLLoader (getClass().getResource("InputMedicalTestDataScreen.fxml"));
+    public InputMedicalTestTypeScreen() throws IOException {
+        FXMLLoader loader = new FXMLLoader (getClass().getResource("InputMedicalTestTypeScreen.fxml"));
         Parent root = loader.load();
         
         Scene scene = new Scene(root, 600, 400);

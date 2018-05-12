@@ -20,7 +20,15 @@ public class TestFunctions {
     /* Create a new InputMedicalTestDataScreen */
     public static void addMedicalTestType () {
         try {
-            InputMedicalTestDataScreen screen = new InputMedicalTestDataScreen();
+            InputMedicalTestTypeScreen screen = new InputMedicalTestTypeScreen();
+        } catch (IOException ex) {
+            Logger.getLogger(TestFunctions.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    static void addMedicalTestResult() {
+        try {
+            InputMedicalTestResultScreen screen = new InputMedicalTestResultScreen();
         } catch (IOException ex) {
             Logger.getLogger(TestFunctions.class.getName()).log(Level.SEVERE, null, ex);
         }

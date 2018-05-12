@@ -26,7 +26,7 @@ import javafx.scene.layout.VBox;
  *  Date: May 11, 2018
  *  Description:
  */
-public class InputMedicalTestDataScreenController implements Initializable {
+public class InputMedicalTestTypeScreenController implements Initializable {
     
     /* Inject all FXML Components */
     
@@ -71,7 +71,7 @@ public class InputMedicalTestDataScreenController implements Initializable {
                 public void handle(ActionEvent event) {
                     if (!nameTextField.getText().equals("")) {
                         MainController.testTypes.add(new MedicalTestType(nameTextField.getText(), ""));
-                        InputMedicalTestDataScreen.close();
+                        InputMedicalTestTypeScreen.close();
                         MainClass.controller.updateMedicalTestTypeList();
                     }
                 }
@@ -82,7 +82,7 @@ public class InputMedicalTestDataScreenController implements Initializable {
         cancelButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
-                InputMedicalTestDataScreen.close();
+                InputMedicalTestTypeScreen.close();
             }  
         });
     }

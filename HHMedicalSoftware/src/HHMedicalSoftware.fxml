@@ -44,7 +44,7 @@
                               </AnchorPane>
                             <AnchorPane fx:id="medicalDataListContainer" minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="188.0">
                                  <children>
-                                    <ListView fx:id="medicalDataListView" fixedCellSize="30.0" layoutY="-7.0" prefHeight="397.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                                    <ListView fx:id="medicalDataListView" fixedCellSize="30.0" layoutY="-7.0" onMouseClicked="#medicalTestTypeListClicked" prefHeight="397.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                  </children>
                               </AnchorPane>
                           </items>
@@ -66,7 +66,7 @@
                               </AnchorPane>
                               <AnchorPane fx:id="testDateListContainer" minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="188.0">
                                  <children>
-                                    <ListView fx:id="testDateListView" fixedCellSize="30.0" layoutY="-7.0" prefHeight="397.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                                    <ListView fx:id="testDateListView" fixedCellSize="30.0" layoutY="-7.0" prefHeight="397.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                  </children>
                               </AnchorPane>
                            </items>
@@ -107,6 +107,7 @@
             <Pane fx:id="bottomPane" prefHeight="45.0" prefWidth="800.0" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="addMedicalTestTypeButton" layoutX="20.0" layoutY="10.0" mnemonicParsing="false" text="Add Medical Test Type" />
+                  <Button fx:id="addMedicalTestResultButton" layoutX="216.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Add Medical Test Result" />
                </children>
             </Pane>
          </bottom>

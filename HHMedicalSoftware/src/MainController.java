@@ -14,6 +14,7 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -89,7 +90,7 @@ public class MainController implements Initializable{
     private SplitPane testResultSplitPane;
 
     @FXML
-    private ListView<String> testDateListView;
+    private ListView<MedicalTestResult> testDateListView;
 
     @FXML
     private AnchorPane leftContainerPane;
@@ -100,12 +101,16 @@ public class MainController implements Initializable{
     @FXML
     private Button addMedicalTestTypeButton;
     
-    public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
+    @FXML
+    private Button addMedicalTestResultButton;
     
+    public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
+    public static MedicalTestType selectedTest = null;
     /* Initialize the components */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         medicalDataListView.getItems().setAll(testTypes);
+        //testDateListView.getItems().setAll(selectedTest.getTests());
         addMedicalTestTypeButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
@@ -114,11 +119,33 @@ public class MainController implements Initializable{
             }
             
         });
+        addMedicalTestResultButton.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+                TestFunctions.addMedicalTestResult();
+                updateData();
+            }
+            
+        });
     }
     
     /* Update list view with current array */
     public void updateMedicalTestTypeList () {
         medicalDataListView.getItems().setAll(testTypes);
+    }
+    public void updateMedicalTestResultList () {
+        testDateListView.getItems().setAll(selectedTest.getTests());
+    }
+    
+    public void updateData () {
+        updateMedicalTestTypeList();
+        updateMedicalTestResultList();
+    }
+    
+    public void medicalTestTypeListClicked (MouseEvent event) {
+        selectedTest = medicalDataListView.getSelectionModel().getSelectedItem();
+        updateMedicalTestResultList();
+        System.out.println(selectedTest.toString());
     }
 
 }

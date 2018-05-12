@@ -18,7 +18,7 @@ public class MedicalTestType {
 
     private String name;
     private String comment;
-    private ArrayList<MedicalTestResult> tests;
+    private ArrayList<MedicalTestResult> tests = new ArrayList<MedicalTestResult>();
 
     public MedicalTestType(String name, String comment) {
         this.name = name;
