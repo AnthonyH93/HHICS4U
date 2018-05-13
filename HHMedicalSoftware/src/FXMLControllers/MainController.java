@@ -1,6 +1,6 @@
 package FXMLControllers;
 
-import MainClasses.TestFunctions;
+import MainClasses.MedicalFunctions;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
 import java.net.URL;
@@ -109,6 +109,7 @@ public class MainController implements Initializable{
     
     public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
     public static MedicalTestType selectedTest = null;
+    
     /* Initialize the components */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -117,7 +118,7 @@ public class MainController implements Initializable{
         addMedicalTestTypeButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
-                TestFunctions.addMedicalTestType();
+                MedicalFunctions.addMedicalTestType();
                 updateMedicalTestTypeList();
             }
             
@@ -125,7 +126,7 @@ public class MainController implements Initializable{
         addMedicalTestResultButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
-                TestFunctions.addMedicalTestResult();
+                MedicalFunctions.addMedicalTestResult();
                 updateData();
             }
             

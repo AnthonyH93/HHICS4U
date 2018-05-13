@@ -12,19 +12,20 @@ import java.util.logging.Logger;
  */
 
 /**
- *  File Name: TestFunctions
+ *  File Name: MedicalFunctions
  *  Programmer: 
  *  Date: May 11, 2018
  *  Description:
  */
-public class TestFunctions {
+
+public class MedicalFunctions {
 
     /* Create a new InputMedicalTestDataScreen */
     public static void addMedicalTestType () {
         try {
             InputMedicalTestTypeScreen screen = new InputMedicalTestTypeScreen();
         } catch (IOException ex) {
-            Logger.getLogger(TestFunctions.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MedicalFunctions.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -32,7 +33,7 @@ public class TestFunctions {
         try {
             InputMedicalTestResultScreen screen = new InputMedicalTestResultScreen();
         } catch (IOException ex) {
-            Logger.getLogger(TestFunctions.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MedicalFunctions.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
