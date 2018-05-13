@@ -1,4 +1,9 @@
+package FXMLControllers;
 
+
+import MainClasses.InputMedicalTestTypeScreen;
+import DataTypes.MedicalTestType;
+import MainClasses.MainClass;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -7,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -26,7 +32,7 @@ import javafx.scene.layout.VBox;
  *  Date: May 11, 2018
  *  Description:
  */
-public class InputMedicalTestResultScreenController implements Initializable {
+public class InputMedicalTestTypeScreenController implements Initializable {
     
     /* Inject all FXML Components */
     
@@ -40,7 +46,7 @@ public class InputMedicalTestResultScreenController implements Initializable {
     private Button submitButton;
 
     @FXML
-    private TextField scoreTextField;
+    private Button cancelButton;
 
     @FXML
     private Pane topBarPane;
@@ -49,37 +55,25 @@ public class InputMedicalTestResultScreenController implements Initializable {
     private Label titleLabel;
 
     @FXML
-    private TextField yearTextField;
-
-    @FXML
-    private TextField dayTextField;
-
-    @FXML
     private Pane bottomPane;
 
     @FXML
-    private Label yearLabel;
+    private GridPane mainGridPane;
+
+    @FXML
+    private TextField nameTextField;
 
     @FXML
     private ImageView logoView;
 
     @FXML
-    private Label monthLabel;
-
+    private Label nameLabel;
+    
     @FXML
-    private Label dayLabel;
-
+    private TextArea commentTextArea;
+    
     @FXML
-    private Label scoreLabel;
-
-    @FXML
-    private Button cancelButton;
-
-    @FXML
-    private TextField monthTextField;
-
-    @FXML
-    private GridPane mainGridPane;
+    private Label commentLabel;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -87,15 +81,10 @@ public class InputMedicalTestResultScreenController implements Initializable {
         submitButton.setOnAction(new EventHandler<ActionEvent> () {
                 @Override
                 public void handle(ActionEvent event) {
-                    if (!dayTextField.getText().equals("")) {
-                        int day = Integer.parseInt(dayTextField.getText());
-                        int month = Integer.parseInt(monthTextField.getText());
-                        int year = Integer.parseInt(yearTextField.getText());
-                        int score = Integer.parseInt(scoreTextField.getText());
-                        MainController.selectedTest.getTests().add(
-                                new MedicalTestResult(new Date(day, month, year), score));
-                        InputMedicalTestResultScreen.close();
-                        MainClass.controller.updateData();
+                    if (!nameTextField.getText().equals("")) {
+                        MainController.testTypes.add(new MedicalTestType(nameTextField.getText(), commentTextArea.getText()));
+                        InputMedicalTestTypeScreen.close();
+                        MainClass.controller.updateMedicalTestTypeList();
                     }
                 }
                 
@@ -105,7 +94,7 @@ public class InputMedicalTestResultScreenController implements Initializable {
         cancelButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
-                InputMedicalTestResultScreen.close();
+                InputMedicalTestTypeScreen.close();
             }  
         });
     }

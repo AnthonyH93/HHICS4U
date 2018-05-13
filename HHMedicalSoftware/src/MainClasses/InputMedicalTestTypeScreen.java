@@ -1,3 +1,5 @@
+package MainClasses;
+
 
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
@@ -12,22 +14,23 @@ import javafx.stage.Stage;
  */
 
 /**
- *  File Name: InputMedicalTestResult
+ *  File Name: InputMedicalTestDataScreen
  *  Programmer: 
- *  Date: May 12, 2018
+ *  Date: May 11, 2018
  *  Description:
  */
-public class InputMedicalTestResultScreen {
+public class InputMedicalTestTypeScreen {
+
     static Stage stage;
     
     /* Create new window from custom fxml template */
-    public InputMedicalTestResultScreen() throws IOException {
-        FXMLLoader loader = new FXMLLoader (getClass().getResource("InputMedicalTestResultScreen.fxml"));
+    public InputMedicalTestTypeScreen() throws IOException {
+        FXMLLoader loader = new FXMLLoader (getClass().getResource("../FXMLTemplates/InputMedicalTestTypeScreen.fxml"));
         Parent root = loader.load();
         
         Scene scene = new Scene(root, 600, 400);
         stage = new Stage();
-        stage.setTitle("Add Medical Result");
+        stage.setTitle("Add Medical Test");
         stage.setScene(scene);
         stage.show();
     }
@@ -36,4 +39,6 @@ public class InputMedicalTestResultScreen {
     public static void close () {
         stage.close();
     }
+    
+
 }

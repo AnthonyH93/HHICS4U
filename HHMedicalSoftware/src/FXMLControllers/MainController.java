@@ -1,8 +1,11 @@
+package FXMLControllers;
+
+import MainClasses.TestFunctions;
+import DataTypes.MedicalTestResult;
+import DataTypes.MedicalTestType;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;

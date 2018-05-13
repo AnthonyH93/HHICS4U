@@ -1,3 +1,5 @@
+package DataTypes;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -24,8 +26,8 @@ public class Date {
     
     public Date(String date) {
         day = date.charAt(0) * 10 + date.charAt(1);
-        day = date.charAt(3) * 10 + date.charAt(4);
-        day = date.charAt(6) * 1000 + date.charAt(7) * 100 + date.charAt(8) * 10 + date.charAt(9);
+        month = date.charAt(3) * 10 + date.charAt(4);
+        year = date.charAt(6) * 10 + date.charAt(7);
     }
 
     @Override

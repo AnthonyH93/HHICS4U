@@ -1,3 +1,5 @@
+package MainClasses;
+
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -26,7 +28,7 @@ public class TestFunctions {
         }
     }
 
-    static void addMedicalTestResult() {
+    public static void addMedicalTestResult() {
         try {
             InputMedicalTestResultScreen screen = new InputMedicalTestResultScreen();
         } catch (IOException ex) {

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.*?>
 
-<VBox fx:id="mainContainer" prefHeight="264.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InputMedicalTestResultScreenController">
+<VBox fx:id="mainContainer" prefHeight="264.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLControllers.InputMedicalTestResultScreenController">
    <children>
       <BorderPane fx:id="mainBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="600.0" VBox.vgrow="ALWAYS">
          <top>
