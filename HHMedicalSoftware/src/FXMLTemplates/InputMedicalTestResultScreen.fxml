@@ -52,7 +52,7 @@
                       <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label fx:id="dayLabel" alignment="CENTER" text="Day:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                        <Label fx:id="dayLabel" alignment="CENTER" text="Date:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <font>
                               <Font name="Arial" size="20.0" />
                            </font>
