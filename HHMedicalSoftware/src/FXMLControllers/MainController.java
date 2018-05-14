@@ -23,7 +23,12 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-/* This class serves as the controller of the components of the main screen */
+/**
+ *  File Name: MainController
+ *  Date: May 11, 2018
+ *  Description: This class serves as the controller of the components of the main screen.
+ */
+
 
 public class MainController implements Initializable{
 

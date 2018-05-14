@@ -15,9 +15,9 @@ import javafx.stage.Stage;
 
 /**
  *  File Name: InputMedicalTestResult
- *  Programmer: 
  *  Date: May 12, 2018
- *  Description:
+ *  Description: This class creates a screen and loads the FXML file for the
+ *  test result input screen.
  */
 public class InputMedicalTestResultScreen {
     static Stage stage;

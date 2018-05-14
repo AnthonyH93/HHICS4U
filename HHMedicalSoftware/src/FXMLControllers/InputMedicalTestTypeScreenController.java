@@ -28,9 +28,8 @@ import javafx.scene.layout.VBox;
 
 /**
  *  File Name: InputMedicalTestDataScreenController
- *  Programmer: 
  *  Date: May 11, 2018
- *  Description:
+ *  Description: This class acts as the controller for the test type screen.
  */
 public class InputMedicalTestTypeScreenController implements Initializable {
     

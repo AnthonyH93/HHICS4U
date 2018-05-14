@@ -28,9 +28,9 @@ import javafx.scene.layout.VBox;
 
 /**
  *  File Name: InputMedicalTestDataScreenController
- *  Programmer: 
  *  Date: May 11, 2018
- *  Description:
+ *  Description: This class is the controller for the test result
+ *  FXML file.
  */
 public class InputMedicalTestResultScreenController implements Initializable {
     

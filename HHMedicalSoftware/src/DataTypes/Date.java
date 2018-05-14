@@ -8,9 +8,8 @@ package DataTypes;
 
 /**
  *  File Name: Date
- *  Programmer: 
  *  Date: May 12, 2018
- *  Description:
+ *  Description: This class is defines the datatype for a date.
  */
 public class Date {
 

@@ -8,9 +8,8 @@ package DataTypes;
 
 /**
  *  File Name: MedicalTestResult
- *  Programmer: 
  *  Date: May 11, 2018
- *  Description:
+ *  Description: This class is defines the datatype for a medical test result.
  */
 
 public class MedicalTestResult {

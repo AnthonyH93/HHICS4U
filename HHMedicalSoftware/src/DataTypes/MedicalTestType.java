@@ -11,9 +11,8 @@ import java.util.ArrayList;
 
 /**
  *  File Name: MedicalTestType
- *  Programmer: 
  *  Date: May 11, 2018
- *  Description:
+ *  Description: This class is defines the datatype for a medical test type.
  */
 
 public class MedicalTestType {

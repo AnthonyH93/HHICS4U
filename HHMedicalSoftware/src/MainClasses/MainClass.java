@@ -15,9 +15,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *
- * 
+ *  File Name: MainClass
+ *  Date: May 11, 2018
+ *  Description: This file is the main class of the program and loads the
+ *  main screen when the program is started.
  */
+
 public class MainClass extends Application {
     
     /* Create variable to hold the controller of the scene */
