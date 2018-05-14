@@ -19,11 +19,13 @@ public class MedicalTestResult {
     private Date date;
     private int score;
 
+    /* Constructor that requires a date and score */
     public MedicalTestResult(Date date, int score) {
         this.date = date;
         this.score = score;
     }
 
+    /* Define getter methods */
     public Date getDate () {
         return date;
     }

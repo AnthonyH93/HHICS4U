@@ -18,27 +18,35 @@ import java.util.ArrayList;
 
 public class MedicalTestType {
 
+    /* Define properties that a test type must have including
+     * a name, description and an array to store the different tests
+    */
     private String name;
-    private String comment;
+    private String description;
     private ArrayList<MedicalTestResult> tests = new ArrayList<MedicalTestResult>();
 
+    /* Define a constructor to give values to properties */
     public MedicalTestType(String name, String comment) {
         this.name = name;
-        this.comment = comment;
+        this.description = comment;
     }
 
+    /* Return the name of the test type */
     public String getName() {
         return name;
     }
     
+    /* Define method to add a new test to the array */
     public void addTest (MedicalTestResult test) {
         tests.add(test);
     }
     
+    /* Define method to return the tests */
     public ArrayList<MedicalTestResult> getTests () {
         return tests;
     }
 
+    /* Return the name as the string version of a test type */
     @Override
     public String toString() {
         return name;

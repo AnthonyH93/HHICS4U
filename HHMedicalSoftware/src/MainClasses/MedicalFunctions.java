@@ -15,7 +15,8 @@ import java.util.logging.Logger;
  *  File Name: MedicalFunctions
  *  Programmer: 
  *  Date: May 11, 2018
- *  Description:
+ *  Description: This class holds all of the functions pertaining to user
+ *  input functions.
  */
 
 public class MedicalFunctions {

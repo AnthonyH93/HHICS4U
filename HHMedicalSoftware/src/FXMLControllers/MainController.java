@@ -145,11 +145,13 @@ public class MainController implements Initializable{
         }
     }
     
+    /* Update all non-static objects on the screen */
     public void updateData () {
         updateMedicalTestTypeList();
         updateMedicalTestResultList();
     }
     
+    /* Define handler for when test type list is clicked */
     public void medicalTestTypeListClicked (MouseEvent event) {
         selectedTest = medicalDataListView.getSelectionModel().getSelectedItem();
         updateMedicalTestResultList();
