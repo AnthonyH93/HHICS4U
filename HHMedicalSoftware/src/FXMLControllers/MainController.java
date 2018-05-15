@@ -1,5 +1,6 @@
 package FXMLControllers;
 
+import DataStorage.FileManager;
 import MainClasses.MedicalFunctions;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
@@ -112,6 +113,9 @@ public class MainController implements Initializable{
     @FXML
     private Button addMedicalTestResultButton;
     
+    @FXML
+    private Button saveButton;
+    
     public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
     public static MedicalTestType selectedTest = null;
     
@@ -133,6 +137,13 @@ public class MainController implements Initializable{
             public void handle(ActionEvent event) {
                 MedicalFunctions.addMedicalTestResult();
                 updateData();
+            }
+            
+        });
+        saveButton.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+                FileManager.save();
             }
             
         });

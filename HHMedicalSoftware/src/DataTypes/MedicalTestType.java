@@ -35,6 +35,11 @@ public class MedicalTestType {
         return name;
     }
     
+    /* Return the description of the test type */
+    public String getDescription() {
+        return description;
+    }
+    
     /* Define method to add a new test to the array */
     public void addTest (MedicalTestResult test) {
         tests.add(test);

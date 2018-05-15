@@ -7,6 +7,8 @@ import DataTypes.MedicalTestResult;
 import MainClasses.MainClass;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -104,7 +106,6 @@ public class InputMedicalTestResultScreenController implements Initializable {
                         MainClass.controller.updateData();
                     }
                 }
-                
             });
         
         /* When button is pressed close the window */
@@ -113,6 +114,39 @@ public class InputMedicalTestResultScreenController implements Initializable {
             public void handle(ActionEvent event) {
                 InputMedicalTestResultScreen.close();
             }  
+        });
+        
+        dayTextField.textProperty().addListener(new ChangeListener<String> () {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (dayTextField.getText().length() > 2) {
+                    String old = dayTextField.getText().substring(0, 2);
+                    dayTextField.setText(old);
+                }
+            }
+            
+        });
+        
+        monthTextField.textProperty().addListener(new ChangeListener<String> () {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (monthTextField.getText().length() > 2) {
+                    String old = monthTextField.getText().substring(0, 2);
+                    monthTextField.setText(old);
+                }
+            }
+            
+        });
+        
+        yearTextField.textProperty().addListener(new ChangeListener<String> () {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (yearTextField.getText().length() > 2) {
+                    String old = yearTextField.getText().substring(0, 2);
+                    yearTextField.setText(old);
+                }
+            }
+            
         });
     }
     

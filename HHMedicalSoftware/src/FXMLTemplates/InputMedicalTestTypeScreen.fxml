@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.*?>
 
-<VBox fx:id="mainContainer" prefHeight="341.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLControllers.InputMedicalTestTypeScreenController">
+<VBox fx:id="mainContainer" prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLControllers.InputMedicalTestTypeScreenController">
    <children>
-      <BorderPane fx:id="mainBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="291.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+      <BorderPane fx:id="mainBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="362.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
          <top>
             <Pane fx:id="topBarPane" prefHeight="140.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="TOP_CENTER">
                <children>
@@ -23,31 +23,31 @@
                         <Image url="@Logo.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="titleLabel" layoutX="143.0" layoutY="79.0" text="Add Medical Test Type" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="titleLabel" layoutX="143.0" layoutY="79.0" style="-fx-border-color: white; -fx-border-width: 2;" text=" Add Medical Test Type " textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="Nirmala UI Semilight" size="32.0" />
+                        <Font name="Calibri" size="35.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
          </top>
          <bottom>
-            <Pane fx:id="bottomPane" prefHeight="65.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <Pane fx:id="bottomPane" prefHeight="48.0" prefWidth="600.0" style="-fx-border-color: black; -fx-border-width: 2;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="submitButton" layoutX="443.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Submit" />
-                  <Button fx:id="cancelButton" layoutX="323.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Cancel" />
+                  <Button fx:id="submitButton" layoutX="488.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Submit" />
+                  <Button fx:id="cancelButton" layoutX="374.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Cancel" />
                </children>
             </Pane>
          </bottom>
          <center>
-            <GridPane fx:id="mainGridPane" prefHeight="34.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <GridPane fx:id="mainGridPane" prefHeight="136.0" prefWidth="600.0" BorderPane.alignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Label fx:id="nameLabel" alignment="CENTER" text="Test Name:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
@@ -60,14 +60,17 @@
                         <Insets bottom="5.0" left="5.0" right="50.0" top="5.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Label fx:id="commentLabel" alignment="CENTER" text="Comments:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Label fx:id="commentLabel" alignment="CENTER" text="Description:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
-                  </Label>
-                  <TextArea fx:id="commentTextArea" prefHeight="106.0" prefWidth="245.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
-                        <Insets bottom="5.0" left="5.0" right="50.0" top="5.0" />
+                        <Insets bottom="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextArea fx:id="commentTextArea" prefHeight="31.0" prefWidth="245.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="5.0" right="50.0" top="5.0" />
                      </GridPane.margin>
                   </TextArea>
                </children>

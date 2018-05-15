@@ -6,13 +6,16 @@ package MainClasses;
  * and open the template in the editor.
  */
 
+import DataStorage.FileManager;
 import FXMLControllers.MainController;
 import java.io.IOException;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 /**
  *  File Name: MainClass
@@ -39,6 +42,13 @@ public class MainClass extends Application {
         primaryStage.show();
         
         controller = loader.getController();
+        
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent> () {
+            @Override
+            public void handle(WindowEvent event) {
+                FileManager.save();
+            }
+        });
     }
 
     /**

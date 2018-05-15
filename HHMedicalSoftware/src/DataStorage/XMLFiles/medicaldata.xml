@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MedicalData SYSTEM "medicaldata.xml">
+<MedicalData>
+    <TestType>
+        <Name>Iron</Name>
+        <Description>test1</Description>
+        <Tests>
+            <Test>
+                <Date>1/2/3</Date>
+                <Score>11</Score>
+            </Test>
+            <Test>
+                <Date>23/1/2</Date>
+                <Score>3</Score>
+            </Test>
+        </Tests>
+    </TestType>
+    <TestType>
+        <Name>Cholesterol</Name>
+        <Description>test2</Description>
+        <Tests>
+            <Test>
+                <Date>12/32/12</Date>
+                <Score>32</Score>
+            </Test>
+        </Tests>
+    </TestType>
+</MedicalData>
