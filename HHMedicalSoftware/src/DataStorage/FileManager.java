@@ -6,10 +6,14 @@
 
 package DataStorage;
 
+import DataTypes.Date;
+import DataTypes.MedicalTestResult;
+import DataTypes.MedicalTestType;
 import FXMLControllers.MainController;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
@@ -19,6 +23,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 /**
  *  File Name: SaveFile
@@ -39,9 +44,28 @@ public class FileManager {
             Document doc = docBuilder.parse(new File("src/DataStorage/XMLFiles/medicaldata.xml"));
             doc.getDocumentElement().normalize();
             
+            NodeList testTypeList = doc.getElementsByTagName("TestType");
+            
+            for (int x = 0; x < testTypeList.getLength(); x++) {
+                Element testType = (Element) testTypeList.item(x);
+                String name = testType.getElementsByTagName("Name").item(0).getTextContent();
+                String description = testType.getElementsByTagName("Description").item(0).getTextContent();
+                Element testsContainer = (Element) testType.getElementsByTagName("Tests").item(0);
+                
+                ArrayList<MedicalTestResult> testArray = new ArrayList<MedicalTestResult> ();
+                NodeList tests = testsContainer.getElementsByTagName("Test");
+                for (int y = 0; y < tests.getLength(); y++) {
+                    Element test = (Element) tests.item(y);
+                    Date date = new Date (test.getElementsByTagName("Date").item(0).getTextContent());
+                    String score = test.getElementsByTagName("Score").item(0).getTextContent();
+                    testArray.add(new MedicalTestResult(date, Integer.parseInt(score)));
+                }
+                MainController.testTypes.add(new MedicalTestType(name, description, testArray));
+                
+            }
             
         } catch (Exception e) {
-            
+            e.printStackTrace();
         }
     }
     
@@ -91,7 +115,6 @@ public class FileManager {
                     transformer.setOutputProperty(OutputKeys.INDENT, "yes");
                     transformer.setOutputProperty(OutputKeys.METHOD, "xml");
                     transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-                    transformer.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, "medicaldata.xml");
                     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
                     
                     transformer.transform(new DOMSource (doc), new StreamResult(new FileOutputStream("src/DataStorage/XMLFiles/medicaldata.xml")));

@@ -1,5 +1,7 @@
 package DataTypes;
 
+import java.text.DecimalFormat;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,6 +19,8 @@ public class Date {
     int day;
     int month;
     int year;
+    
+    DecimalFormat dFormat = new DecimalFormat("00");
 
     /* Define constructor to fill in properties */
     public Date(int day, int month, int year) {
@@ -27,16 +31,16 @@ public class Date {
     
     /* Define a different type of constructor that converts string into a date */
     public Date(String date) {
-        day = date.charAt(0) * 10 + date.charAt(1);
-        month = date.charAt(3) * 10 + date.charAt(4);
-        year = date.charAt(6) * 10 + date.charAt(7);
+        day = Character.getNumericValue(date.charAt(0)) * 10 + Character.getNumericValue(date.charAt(1));
+        month = Character.getNumericValue(date.charAt(3)) * 10 + Character.getNumericValue(date.charAt(4));
+        year = Character.getNumericValue(date.charAt(6)) * 10 + Character.getNumericValue(date.charAt(7));
     }
 
     /* Override string version to output a string with all the properties */
     @Override
     public String toString() {
         StringBuilder string = new StringBuilder();
-        string.append(day).append("/").append(month).append("/").append(year);
+        string.append(dFormat.format(day)).append("/").append(dFormat.format(month)).append("/").append(dFormat.format(year));
         return string.toString();
     }
     

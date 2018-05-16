@@ -43,6 +43,9 @@ public class MainClass extends Application {
         
         controller = loader.getController();
         
+        FileManager.open();
+        controller.updateData();
+        
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent> () {
             @Override
             public void handle(WindowEvent event) {

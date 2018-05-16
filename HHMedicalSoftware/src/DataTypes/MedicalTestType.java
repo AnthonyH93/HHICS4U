@@ -25,9 +25,15 @@ public class MedicalTestType {
     private ArrayList<MedicalTestResult> tests = new ArrayList<MedicalTestResult>();
 
     /* Define a constructor to give values to properties */
-    public MedicalTestType(String name, String comment) {
+    public MedicalTestType(String name, String description) {
         this.name = name;
-        this.description = comment;
+        this.description = description;
+    }
+    
+    public MedicalTestType(String name, String description, ArrayList<MedicalTestResult> tests) {
+        this.name = name;
+        this.description = description;
+        this.tests = tests;
     }
 
     /* Return the name of the test type */
