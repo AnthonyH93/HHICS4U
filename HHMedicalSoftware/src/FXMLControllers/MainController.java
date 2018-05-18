@@ -116,6 +116,25 @@ public class MainController implements Initializable{
     @FXML
     private Button saveButton;
     
+    @FXML
+    private Button btnLaunchWarningsScreen;
+    
+    @FXML
+    private Pane mainPane;
+    
+    @FXML
+    private TextArea txtWarnings;
+    
+    @FXML
+    private TextArea txtSuggestions;
+    
+    @FXML
+    private Button btnBack;
+    
+    @FXML
+    private Button btnSearch;
+            
+    
     public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
     public static MedicalTestType selectedTest = null;
     

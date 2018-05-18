@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Accordion layoutX="46.0" layoutY="14.0" />
+      <Text layoutX="167.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warnings and Suggestions" wrappingWidth="266.13671875">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutX="-185.0" layoutY="186.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="398.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutY="372.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutX="387.0" layoutY="186.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="398.0" />
+      <Text layoutX="52.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="According to your medical data, the following suggestions and warnings apply:" wrappingWidth="497.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="60.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warnings:" wrappingWidth="74.734375">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="txtWarnings" layoutX="52.0" layoutY="108.0" prefHeight="249.0" prefWidth="240.0" />
+      <TextArea fx:id="txtSuggestions" layoutX="292.0" layoutY="108.0" prefHeight="249.0" prefWidth="240.0" />
+      <Text layoutX="301.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suggestions:" wrappingWidth="105.154296875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnBack" layoutX="67.0" layoutY="374.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="btnSearch" layoutX="167.0" layoutY="374.0" mnemonicParsing="false" text="Search" />
+   </children>
+</Pane>

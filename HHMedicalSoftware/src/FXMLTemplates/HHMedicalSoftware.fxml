@@ -113,6 +113,7 @@
                <children>
                   <Button fx:id="addMedicalTestTypeButton" layoutX="20.0" layoutY="10.0" mnemonicParsing="false" text="Add Medical Test Type" />
                   <Button fx:id="addMedicalTestResultButton" layoutX="216.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Add Medical Test Result" />
+                  <Button fx:id="btnLaunchWarningsScreen" layoutX="400.0" layoutY="10.0" mnemonicParsing="false" text="Launch Warnings Screen" />
                </children>
             </Pane>
          </bottom>
