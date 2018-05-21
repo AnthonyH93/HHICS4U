@@ -4,6 +4,7 @@ import DataStorage.FileManager;
 import MainClasses.MedicalFunctions;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -137,6 +138,7 @@ public class MainController implements Initializable{
     
     public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
     public static MedicalTestType selectedTest = null;
+    public static MedicalTestResult selectedResult = null;
     
     /* Initialize the components */
     @Override
@@ -190,6 +192,29 @@ public class MainController implements Initializable{
     public void medicalTestTypeListClicked (MouseEvent event) {
         selectedTest = medicalDataListView.getSelectionModel().getSelectedItem();
         updateMedicalTestResultList();
+    }
+    
+    /* Define handler for when test type list is clicked */
+    public void medicalTestResultListClicked (MouseEvent event) {
+        selectedResult = testDateListView.getSelectionModel().getSelectedItem();
+        updateTestResultBox();
+    }
+
+    private void updateTestResultBox() {
+        try {
+            StringBuilder output = new StringBuilder();
+            output.append("Test:         " + selectedTest.getName());
+            output.append("\n");
+            output.append("Description: " + selectedTest.getDescription());
+            output.append("\n");
+            output.append("Test Date:    " + selectedResult.getDate());
+            output.append("\n\n");
+            output.append("Score:        " + selectedResult.getScore());
+        
+            testResultTextArea.setText(output.toString());
+        } catch (NullPointerException e) {
+            System.out.println("Result has not been selected.");
+        }
     }
 
 }

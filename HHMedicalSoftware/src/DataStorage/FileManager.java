@@ -118,7 +118,6 @@ public class FileManager {
                     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
                     
                     transformer.transform(new DOMSource (doc), new StreamResult(new FileOutputStream("src/DataStorage/XMLFiles/medicaldata.xml")));
-                    transformer.transform(new DOMSource (doc), new StreamResult(System.out));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
