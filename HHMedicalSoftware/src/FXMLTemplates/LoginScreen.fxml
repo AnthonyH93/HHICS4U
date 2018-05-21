@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: darkgrey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="0.0" prefWidth="600.0">
+         <top>
+            <Pane prefHeight="63.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="86.0" fitWidth="344.0" layoutX="14.0" layoutY="7.0" preserveRatio="true">
+                     <image>
+                        <Image url="@Logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <VBox alignment="CENTER" prefHeight="93.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="591.0" style="-fx-background-color: #101010; -fx-text-fill: white; -fx-border-width: 5; -fx-border-color: darkgrey;" text="Welcome" textAlignment="CENTER">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="70.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="44.72" radius="20.3175" spread="0.19" width="38.55" />
+                     </effect>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="276.0" style="-fx-background-color: white; -fx-text-fill: #101010; -fx-border-width: 5; -fx-border-color: #101010;" text="User Name:" textAlignment="CENTER">
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" height="44.72" radius="20.3175" spread="0.19" width="38.55" />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField prefHeight="205.0" prefWidth="277.0" style="-fx-border-color: #101010; -fx-border-width: 5;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="276.0" style="-fx-background-color: white; -fx-text-fill: #101010; -fx-border-width: 5; -fx-border-color: #101010;" text="Password:" textAlignment="CENTER">
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" height="44.72" radius="20.3175" spread="0.19" width="38.55" />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField prefHeight="205.0" prefWidth="277.0" style="-fx-border-color: #101010; -fx-border-width: 5;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</VBox>
