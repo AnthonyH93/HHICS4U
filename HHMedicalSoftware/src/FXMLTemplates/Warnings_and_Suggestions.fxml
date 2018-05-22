@@ -7,37 +7,35 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Accordion layoutX="46.0" layoutY="14.0" />
-      <Text layoutX="167.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warnings and Suggestions" wrappingWidth="266.13671875">
+      <Rectangle fx:id="rectangle2" arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <Rectangle fx:id="rectangle1" arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutX="-185.0" layoutY="186.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="398.0" />
+      <Rectangle fx:id="rectangle4" arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutY="372.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <Rectangle fx:id="rectangle3" arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutX="387.0" layoutY="186.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="398.0" />
+      <TextArea fx:id="txtWarnings" layoutX="52.0" layoutY="108.0" prefHeight="249.0" prefWidth="240.0" />
+      <TextArea fx:id="txtSuggestions" layoutX="292.0" layoutY="108.0" prefHeight="249.0" prefWidth="240.0" />
+      <Button fx:id="btnBack" layoutX="67.0" layoutY="374.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="btnSearch" layoutX="167.0" layoutY="374.0" mnemonicParsing="false" text="Search" />
+      <Label fx:id="label4" layoutX="171.0" layoutY="26.0" text="Warnings and Suggestions">
          <font>
             <Font size="22.0" />
          </font>
-      </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutX="-185.0" layoutY="186.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="398.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutY="372.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutX="387.0" layoutY="186.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="398.0" />
-      <Text layoutX="52.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="According to your medical data, the following suggestions and warnings apply:" wrappingWidth="497.0">
+      </Label>
+      <Label fx:id="label3" layoutX="58.0" layoutY="58.0" text="According to your medical data, the following suggestions and warnings apply:">
          <font>
             <Font size="14.0" />
          </font>
-      </Text>
-      <Text layoutX="60.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warnings:" wrappingWidth="74.734375">
+      </Label>
+      <Label fx:id="label2" layoutX="56.0" layoutY="88.0" text="Warnings:">
          <font>
             <Font size="14.0" />
          </font>
-      </Text>
-      <TextArea fx:id="txtWarnings" layoutX="52.0" layoutY="108.0" prefHeight="249.0" prefWidth="240.0" />
-      <TextArea fx:id="txtSuggestions" layoutX="292.0" layoutY="108.0" prefHeight="249.0" prefWidth="240.0" />
-      <Text layoutX="301.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suggestions:" wrappingWidth="105.154296875">
+      </Label>
+      <Label fx:id="label1" layoutX="292.0" layoutY="88.0" text="Suggestions:">
          <font>
             <Font size="14.0" />
          </font>
-      </Text>
-      <Button fx:id="btnBack" layoutX="67.0" layoutY="374.0" mnemonicParsing="false" text="Back" />
-      <Button fx:id="btnSearch" layoutX="167.0" layoutY="374.0" mnemonicParsing="false" text="Search" />
+      </Label>
    </children>
 </Pane>
