@@ -168,7 +168,13 @@ public class MainController implements Initializable{
             }
             
         });
-    }
+        btnLaunchWarningsScreen.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+                MedicalFunctions.openWarningsScreen();
+            }
+        });
+       }
     
     /* Update list view with current array */
     public void updateMedicalTestTypeList () {

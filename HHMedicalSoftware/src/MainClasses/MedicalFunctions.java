@@ -36,4 +36,11 @@ public class MedicalFunctions {
             Logger.getLogger(MedicalFunctions.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    public static void openWarningsScreen() {
+        try {
+            WarningsAndSuggestionsScreen screen = new WarningsAndSuggestionsScreen();
+        } catch (IOException ex) {
+            Logger.getLogger(MedicalFunctions.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

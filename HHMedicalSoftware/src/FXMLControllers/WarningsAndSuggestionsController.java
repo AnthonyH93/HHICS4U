@@ -4,6 +4,7 @@ import MainClasses.InputMedicalTestResultScreen;
 import DataTypes.Date;
 import DataTypes.MedicalTestResult;
 import MainClasses.MainClass;
+import MainClasses.WarningsAndSuggestionsScreen;
 import java.awt.Rectangle;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -63,7 +64,14 @@ public class WarningsAndSuggestionsController implements Initializable{
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        /* When back button is pressed close window */
+        btnBack.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+                WarningsAndSuggestionsScreen.close();
+            }  
+        });
+        
     }
     
     
