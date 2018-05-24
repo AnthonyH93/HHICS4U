@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <MedicalData>
     <TestType>
-        <Name>Iron</Name>
+        <Name>test1</Name>
         <Description>test1</Description>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
         <Tests>
             <Test>
                 <Date>09/10/95</Date>
@@ -17,6 +21,10 @@
     <TestType>
         <Name>Cholesterol</Name>
         <Description>test2</Description>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
         <Tests>
             <Test>
                 <Date>10/22/15</Date>

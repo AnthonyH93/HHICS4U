@@ -34,6 +34,10 @@ public class FileManager {
     
     private static Element name;
     private static Element comment;
+    private static Element greenMinimumScore;
+    private static Element greenMaximumScore;
+    private static Element yellowMinimumScore;
+    private static Element yellowMaximumScore;
     private static Element date;
     private static Element score;
     
@@ -50,6 +54,10 @@ public class FileManager {
                 Element testType = (Element) testTypeList.item(x);
                 String name = testType.getElementsByTagName("Name").item(0).getTextContent();
                 String description = testType.getElementsByTagName("Description").item(0).getTextContent();
+                int greenMinimumScore = Integer.parseInt(testType.getElementsByTagName("GreenMinimumScore").item(0).getTextContent());
+                int greenMaximumScore = Integer.parseInt(testType.getElementsByTagName("GreenMaximumScore").item(0).getTextContent());
+                int yellowMinimumScore = Integer.parseInt(testType.getElementsByTagName("YellowMinimumScore").item(0).getTextContent());
+                int yellowMaximumScore = Integer.parseInt(testType.getElementsByTagName("YellowMaximumScore").item(0).getTextContent());
                 Element testsContainer = (Element) testType.getElementsByTagName("Tests").item(0);
                 
                 ArrayList<MedicalTestResult> testArray = new ArrayList<MedicalTestResult> ();
@@ -60,7 +68,7 @@ public class FileManager {
                     String score = test.getElementsByTagName("Score").item(0).getTextContent();
                     testArray.add(new MedicalTestResult(date, Integer.parseInt(score)));
                 }
-                MainController.testTypes.add(new MedicalTestType(name, description, testArray));
+                MainController.testTypes.add(new MedicalTestType(name, description, greenMinimumScore, greenMaximumScore, yellowMinimumScore, yellowMaximumScore, testArray));
                 
             }
             
@@ -87,10 +95,26 @@ public class FileManager {
                 Element description = doc.createElement("Description");
                 description.setTextContent(MainController.testTypes.get(x).getDescription());
                 
+                Element greenMinimumScore = doc.createElement("GreenMinimumScore");
+                greenMinimumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getGreenMinimumScore()));
+                
+                Element greenMaximumScore = doc.createElement("GreenMaximumScore");
+                greenMaximumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getGreenMaximumScore()));
+                
+                Element yellowMinimumScore = doc.createElement("YellowMinimumScore");
+                yellowMinimumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getYellowMinimumScore()));
+                
+                Element yellowMaximumScore = doc.createElement("YellowMaximumScore");
+                yellowMaximumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getYellowMaximumScore()));
+                
                 Element tests = doc.createElement("Tests");
                 
                 testType.appendChild(name);
                 testType.appendChild(description);
+                testType.appendChild(greenMinimumScore);
+                testType.appendChild(greenMaximumScore);
+                testType.appendChild(yellowMinimumScore);
+                testType.appendChild(yellowMaximumScore);
                 testType.appendChild(tests);
                 
                 for (int y = 0; y < MainController.testTypes.get(x).getTests().size(); y++) {

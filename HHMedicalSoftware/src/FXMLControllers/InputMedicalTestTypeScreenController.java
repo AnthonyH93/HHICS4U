@@ -81,7 +81,6 @@ public class InputMedicalTestTypeScreenController implements Initializable {
                 @Override
                 public void handle(ActionEvent event) {
                     if (!nameTextField.getText().equals("")) {
-                        MainController.testTypes.add(new MedicalTestType(nameTextField.getText(), commentTextArea.getText()));
                         InputMedicalTestTypeScreen.close();
                         MainClass.controller.updateMedicalTestTypeList();
                     }

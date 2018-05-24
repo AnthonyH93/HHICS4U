@@ -26,7 +26,7 @@ public class InputMedicalTestTypeScreen {
     
     /* Create new window from custom fxml template */
     public InputMedicalTestTypeScreen() throws IOException {
-        FXMLLoader loader = new FXMLLoader (getClass().getResource("../FXMLTemplates/InputMedicalTestTypeScreen.fxml"));
+        FXMLLoader loader = new FXMLLoader (getClass().getResource("../FXMLTemplates/MedicalTestTypeManager.fxml"));
         Parent root = loader.load();
         
         Scene scene = new Scene(root, 600, 400);

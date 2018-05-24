@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<VBox fx:id="mainContainer" prefHeight="442.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLControllers.MedicalTestTypeManagerScreenController">
+   <children>
+      <BorderPane fx:id="mainBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="317.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <top>
+            <Pane fx:id="topBarPane" prefHeight="140.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <ImageView fx:id="logoView" fitHeight="47.0" fitWidth="353.0" layoutX="14.0" layoutY="14.0">
+                     <image>
+                        <Image url="@Logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="titleLabel" layoutX="142.0" layoutY="70.0" style="-fx-border-color: white; -fx-border-width: 2;" text=" Medical Test Types " textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+         <bottom>
+            <Pane fx:id="bottomPane" prefHeight="46.0" prefWidth="600.0" style="-fx-border-color: black; -fx-border-width: 2;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="submitButton" layoutX="499.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Submit" />
+                  <Button fx:id="cancelButton" layoutX="394.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Cancel" />
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <VBox fx:id="tableContainer" prefHeight="96.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="testTypeTable" editable="true" prefHeight="261.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn fx:id="nameColumn" prefWidth="128.0" text="Test Name" />
+                      <TableColumn fx:id="greenColumn" prefWidth="214.0" text="Green Range">
+                           <columns>
+                              <TableColumn fx:id="greenMinimumColumn" prefWidth="104.0" text="Minimum" />
+                              <TableColumn fx:id="greenMaximumColumn" prefWidth="87.0" text="Maximum" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="yellowColumn" prefWidth="257.0" text="Yellow Range">
+                           <columns>
+                              <TableColumn fx:id="yellowMinimumColumn" prefWidth="141.0" text="Minimum" />
+                              <TableColumn fx:id="yellowMaximumColumn" prefWidth="139.0" text="Maximum" />
+                           </columns>
+                        </TableColumn>
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</VBox>
