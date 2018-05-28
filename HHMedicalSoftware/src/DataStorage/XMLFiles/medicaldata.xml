@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <MedicalData>
     <TestType>
-        <Name>test1</Name>
+        <Name>Iron</Name>
         <Description>test1</Description>
         <GreenMinimumScore>0</GreenMinimumScore>
         <GreenMaximumScore>0</GreenMaximumScore>
