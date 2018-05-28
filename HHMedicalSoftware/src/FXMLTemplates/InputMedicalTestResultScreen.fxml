@@ -108,7 +108,7 @@
                               <Font name="Arial" size="20.0" />
                            </font>
                         </Label>
-                        <ComboBox prefHeight="25.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <ComboBox fx:id="typeDropList" prefHeight="25.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
                </children>

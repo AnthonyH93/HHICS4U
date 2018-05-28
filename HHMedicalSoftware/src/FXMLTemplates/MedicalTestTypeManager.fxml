@@ -36,6 +36,8 @@
                <children>
                   <Button fx:id="submitButton" layoutX="499.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Submit" />
                   <Button fx:id="cancelButton" layoutX="394.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Cancel" />
+                  <Button fx:id="addButton" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Add Type" />
+                  <Button fx:id="deleteButton" layoutX="116.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Delete Type" />
                </children>
             </Pane>
          </bottom>

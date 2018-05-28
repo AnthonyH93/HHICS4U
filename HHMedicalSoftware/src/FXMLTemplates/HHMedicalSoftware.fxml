@@ -111,9 +111,10 @@
          <bottom>
             <Pane fx:id="bottomPane" prefHeight="45.0" prefWidth="800.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="addMedicalTestTypeButton" layoutX="20.0" layoutY="10.0" mnemonicParsing="false" text="Add Medical Test Type" />
-                  <Button fx:id="addMedicalTestResultButton" layoutX="216.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Add Medical Test Result" />
-                  <Button fx:id="btnLaunchWarningsScreen" layoutX="400.0" layoutY="10.0" mnemonicParsing="false" text="Launch Warnings Screen" />
+                  <Button fx:id="addMedicalTestTypeButton" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" text="Medical Test Type Manager" />
+                  <Button fx:id="addMedicalTestResultButton" layoutX="199.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Add Result" />
+                  <Button fx:id="btnLaunchWarningsScreen" layoutX="640.0" layoutY="10.0" mnemonicParsing="false" text="Launch Warnings Screen" />
+                  <Button fx:id="deleteMedicalTestResultButton" layoutX="302.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Delete Result" />
                </children>
             </Pane>
          </bottom>

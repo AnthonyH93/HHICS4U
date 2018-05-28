@@ -4,16 +4,19 @@ package FXMLControllers;
 import MainClasses.InputMedicalTestResultScreen;
 import DataTypes.Date;
 import DataTypes.MedicalTestResult;
+import DataTypes.MedicalTestType;
 import MainClasses.MainClass;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -88,6 +91,9 @@ public class InputMedicalTestResultScreenController implements Initializable {
 
     @FXML
     private GridPane mainGridPane;
+    
+    @FXML
+    private ComboBox<MedicalTestType> typeDropList;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -100,7 +106,7 @@ public class InputMedicalTestResultScreenController implements Initializable {
                         int month = Integer.parseInt(monthTextField.getText());
                         int year = Integer.parseInt(yearTextField.getText());
                         int score = Integer.parseInt(scoreTextField.getText());
-                        MainController.selectedTest.getTests().add(
+                        typeDropList.getValue().getTests().add(
                                 new MedicalTestResult(new Date(day, month, year), score));
                         InputMedicalTestResultScreen.close();
                         MainClass.controller.updateData();
@@ -115,6 +121,8 @@ public class InputMedicalTestResultScreenController implements Initializable {
                 InputMedicalTestResultScreen.close();
             }  
         });
+        
+        typeDropList.setItems(FXCollections.observableArrayList(MainController.testTypes));
         
         dayTextField.textProperty().addListener(new ChangeListener<String> () {
             @Override

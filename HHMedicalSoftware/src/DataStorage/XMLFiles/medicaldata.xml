@@ -12,10 +12,6 @@
                 <Date>09/10/95</Date>
                 <Score>11</Score>
             </Test>
-            <Test>
-                <Date>09/10/25</Date>
-                <Score>3</Score>
-            </Test>
         </Tests>
     </TestType>
     <TestType>
@@ -33,10 +29,6 @@
             <Test>
                 <Date>12/21/32</Date>
                 <Score>12</Score>
-            </Test>
-            <Test>
-                <Date>32/41/12</Date>
-                <Score>22</Score>
             </Test>
         </Tests>
     </TestType>

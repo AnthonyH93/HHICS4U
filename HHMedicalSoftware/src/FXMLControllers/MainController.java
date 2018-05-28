@@ -121,6 +121,9 @@ public class MainController implements Initializable{
     private Button btnLaunchWarningsScreen;
     
     @FXML
+    private Button deleteMedicalTestResultButton;
+    
+    @FXML
     private Pane mainPane;
     
     @FXML
@@ -149,7 +152,7 @@ public class MainController implements Initializable{
             @Override
             public void handle(ActionEvent event) {
                 MedicalFunctions.addMedicalTestType();
-                updateMedicalTestTypeList();
+                updateData();
             }
             
         });
@@ -157,6 +160,14 @@ public class MainController implements Initializable{
             @Override
             public void handle(ActionEvent event) {
                 MedicalFunctions.addMedicalTestResult();
+                updateData();
+            }
+            
+        });
+        deleteMedicalTestResultButton.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+                selectedTest.getTests().remove(testDateListView.getSelectionModel().getSelectedItem());
                 updateData();
             }
             

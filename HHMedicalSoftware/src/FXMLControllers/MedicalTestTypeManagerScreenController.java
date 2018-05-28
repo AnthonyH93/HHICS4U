@@ -6,7 +6,10 @@
 
 package FXMLControllers;
 
+import DataTypes.Date;
+import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
+import MainClasses.InputMedicalTestResultScreen;
 import MainClasses.InputMedicalTestTypeScreen;
 import MainClasses.MainClass;
 import java.net.URL;
@@ -88,6 +91,12 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
     private TableView<MedicalTestType> testTypeTable;
     
     ObservableList<MedicalTestType> tests;
+    
+    @FXML
+    private Button addButton;
+    
+    @FXML
+    private Button deleteButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -155,6 +164,22 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
                     MainClass.controller.updateData();
                 }
                 
+            });
+        
+        /* When button is pressed create a new item in the table */
+        addButton.setOnAction(new EventHandler<ActionEvent> () {
+                @Override
+                public void handle(ActionEvent event) {
+                    testTypeTable.getItems().add(new MedicalTestType("", "", 0, 0, 0, 0));
+                }
+            });
+        
+        /* When button is pressed remove data from array */
+        deleteButton.setOnAction(new EventHandler<ActionEvent> () {
+                @Override
+                public void handle(ActionEvent event) {
+                    testTypeTable.getItems().remove(testTypeTable.getSelectionModel().getSelectedItem());
+                }
             });
         
         /* When button is pressed close the window */
