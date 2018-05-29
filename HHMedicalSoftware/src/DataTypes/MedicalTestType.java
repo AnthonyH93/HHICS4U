@@ -71,6 +71,11 @@ public  class MedicalTestType {
         greenMinimumScore.set(g);
     }
     
+    public void setTests (ArrayList<MedicalTestResult> t) {
+        tests.clear();
+        tests.addAll(t);
+    }
+    
     /* Return the name of the test type */
     public String getName() {
         return name.getValue();

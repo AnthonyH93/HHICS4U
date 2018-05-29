@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <MedicalData>
-    <TestType>
-        <Name>Iron</Name>
-        <Description>test1</Description>
-        <GreenMinimumScore>0</GreenMinimumScore>
-        <GreenMaximumScore>0</GreenMaximumScore>
-        <YellowMinimumScore>0</YellowMinimumScore>
-        <YellowMaximumScore>0</YellowMaximumScore>
+    <TestEntry>
+        <Type>Iron</Type>
         <Tests>
             <Test>
-                <Date>09/10/95</Date>
-                <Score>11</Score>
+                <Date>34/12/43</Date>
+                <Score>423</Score>
             </Test>
         </Tests>
-    </TestType>
-    <TestType>
-        <Name>Cholesterol</Name>
-        <Description>test2</Description>
-        <GreenMinimumScore>0</GreenMinimumScore>
-        <GreenMaximumScore>0</GreenMaximumScore>
-        <YellowMinimumScore>0</YellowMinimumScore>
-        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestEntry>
+    <TestEntry>
+        <Type>Cholesterol</Type>
         <Tests>
             <Test>
-                <Date>10/22/15</Date>
-                <Score>32</Score>
+                <Date>43/11/12</Date>
+                <Score>33</Score>
             </Test>
             <Test>
-                <Date>12/21/32</Date>
-                <Score>12</Score>
+                <Date>34/23/23</Date>
+                <Score>324</Score>
             </Test>
         </Tests>
-    </TestType>
+    </TestEntry>
+    <TestEntry>
+        <Type>Hemglobin</Type>
+        <Tests>
+            <Test>
+                <Date>12/12/11</Date>
+                <Score>21</Score>
+            </Test>
+        </Tests>
+    </TestEntry>
 </MedicalData>

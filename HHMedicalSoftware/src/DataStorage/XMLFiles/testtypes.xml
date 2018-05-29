@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MedicalTypes>
+    <TestType>
+        <Name>Iron</Name>
+        <Description>test1</Description>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+    <TestType>
+        <Name>Cholesterol</Name>
+        <Description>test2</Description>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+    <TestType>
+        <Name>Hemglobin</Name>
+        <Description/>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+</MedicalTypes>

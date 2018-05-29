@@ -42,14 +42,14 @@ public class FileManager {
     private static Element score;
     
     public static void open () {
+        
         try {
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse(new File("src/DataStorage/XMLFiles/medicaldata.xml"));
+            Document doc = docBuilder.parse(new File("src/DataStorage/XMLFiles/testtypes.xml"));
             doc.getDocumentElement().normalize();
             
             NodeList testTypeList = doc.getElementsByTagName("TestType");
-            
             for (int x = 0; x < testTypeList.getLength(); x++) {
                 Element testType = (Element) testTypeList.item(x);
                 String name = testType.getElementsByTagName("Name").item(0).getTextContent();
@@ -58,6 +58,35 @@ public class FileManager {
                 int greenMaximumScore = Integer.parseInt(testType.getElementsByTagName("GreenMaximumScore").item(0).getTextContent());
                 int yellowMinimumScore = Integer.parseInt(testType.getElementsByTagName("YellowMinimumScore").item(0).getTextContent());
                 int yellowMaximumScore = Integer.parseInt(testType.getElementsByTagName("YellowMaximumScore").item(0).getTextContent());
+                
+                MainController.testTypes.add(new MedicalTestType(name, description, greenMinimumScore, greenMaximumScore, yellowMinimumScore, yellowMaximumScore));
+                
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        try {
+            DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+            Document doc = docBuilder.parse(new File("src/DataStorage/XMLFiles/medicaldata.xml"));
+            doc.getDocumentElement().normalize();
+            
+            NodeList testTypeList = doc.getElementsByTagName("TestEntry");
+            
+            for (int x = 0; x < testTypeList.getLength(); x++) {
+                int index = 0;
+                
+                Element testType = (Element) testTypeList.item(x);
+                String name = testType.getElementsByTagName("Type").item(0).getTextContent();
+                
+                for (int i = 0; i < MainController.testTypes.size(); i++) {
+                    if (name.equals(MainController.testTypes.get(i).getName())) { 
+                        index = i;
+                    }
+                }
+                
                 Element testsContainer = (Element) testType.getElementsByTagName("Tests").item(0);
                 
                 ArrayList<MedicalTestResult> testArray = new ArrayList<MedicalTestResult> ();
@@ -68,7 +97,8 @@ public class FileManager {
                     String score = test.getElementsByTagName("Score").item(0).getTextContent();
                     testArray.add(new MedicalTestResult(date, Integer.parseInt(score)));
                 }
-                MainController.testTypes.add(new MedicalTestType(name, description, greenMinimumScore, greenMaximumScore, yellowMinimumScore, yellowMaximumScore, testArray));
+                
+                MainController.testTypes.get(index).setTests(testArray);
                 
             }
             
@@ -87,34 +117,14 @@ public class FileManager {
             doc.appendChild(root);
             
             for (int x = 0; x < MainController.testTypes.size(); x++) {
-                Element testType = doc.createElement("TestType");
+                Element testType = doc.createElement("TestEntry");
                 
-                Element name = doc.createElement("Name");
-                name.setTextContent(MainController.testTypes.get(x).getName());
-                
-                Element description = doc.createElement("Description");
-                description.setTextContent(MainController.testTypes.get(x).getDescription());
-                
-                Element greenMinimumScore = doc.createElement("GreenMinimumScore");
-                greenMinimumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getGreenMinimumScore()));
-                
-                Element greenMaximumScore = doc.createElement("GreenMaximumScore");
-                greenMaximumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getGreenMaximumScore()));
-                
-                Element yellowMinimumScore = doc.createElement("YellowMinimumScore");
-                yellowMinimumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getYellowMinimumScore()));
-                
-                Element yellowMaximumScore = doc.createElement("YellowMaximumScore");
-                yellowMaximumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getYellowMaximumScore()));
+                Element type = doc.createElement("Type");
+                type.setTextContent(MainController.testTypes.get(x).getName());
                 
                 Element tests = doc.createElement("Tests");
                 
-                testType.appendChild(name);
-                testType.appendChild(description);
-                testType.appendChild(greenMinimumScore);
-                testType.appendChild(greenMaximumScore);
-                testType.appendChild(yellowMinimumScore);
-                testType.appendChild(yellowMaximumScore);
+                testType.appendChild(type);
                 testType.appendChild(tests);
                 
                 for (int y = 0; y < MainController.testTypes.get(x).getTests().size(); y++) {
@@ -142,6 +152,62 @@ public class FileManager {
                     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
                     
                     transformer.transform(new DOMSource (doc), new StreamResult(new FileOutputStream("src/DataStorage/XMLFiles/medicaldata.xml")));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        try {
+            DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+            Document doc = docBuilder.newDocument();
+            
+            Element root = doc.createElement("MedicalTypes");
+            doc.appendChild(root);
+            
+            for (int x = 0; x < MainController.testTypes.size(); x++) {
+                Element testType = doc.createElement("TestType");
+                
+                Element name = doc.createElement("Name");
+                name.setTextContent(MainController.testTypes.get(x).getName());
+                
+                Element description = doc.createElement("Description");
+                description.setTextContent(MainController.testTypes.get(x).getDescription());
+                
+                Element greenMinimumScore = doc.createElement("GreenMinimumScore");
+                greenMinimumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getGreenMinimumScore()));
+                
+                Element greenMaximumScore = doc.createElement("GreenMaximumScore");
+                greenMaximumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getGreenMaximumScore()));
+                
+                Element yellowMinimumScore = doc.createElement("YellowMinimumScore");
+                yellowMinimumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getYellowMinimumScore()));
+                
+                Element yellowMaximumScore = doc.createElement("YellowMaximumScore");
+                yellowMaximumScore.setTextContent(Integer.toString(MainController.testTypes.get(x).getYellowMaximumScore()));
+                
+                
+                testType.appendChild(name);
+                testType.appendChild(description);
+                testType.appendChild(greenMinimumScore);
+                testType.appendChild(greenMaximumScore);
+                testType.appendChild(yellowMinimumScore);
+                testType.appendChild(yellowMaximumScore);
+                
+                                
+                root.appendChild(testType);
+                
+                try {
+                    Transformer transformer = TransformerFactory.newInstance().newTransformer();
+                    transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+                    transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+                    transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+                    transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+                    
+                    transformer.transform(new DOMSource (doc), new StreamResult(new FileOutputStream("src/DataStorage/XMLFiles/testtypes.xml")));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
