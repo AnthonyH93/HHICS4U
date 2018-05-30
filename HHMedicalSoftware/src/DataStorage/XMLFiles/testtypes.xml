@@ -33,7 +33,23 @@
         <YellowMaximumScore>0</YellowMaximumScore>
     </TestType>
     <TestType>
+        <Name>Platlets (mL)</Name>
+        <Description/>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+    <TestType>
         <Name>Potassium (mEq/L)</Name>
+        <Description/>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+    <TestType>
+        <Name>RBC (million cmm)</Name>
         <Description/>
         <GreenMinimumScore>0</GreenMinimumScore>
         <GreenMaximumScore>0</GreenMaximumScore>
@@ -57,23 +73,7 @@
         <YellowMaximumScore>0</YellowMaximumScore>
     </TestType>
     <TestType>
-        <Name>RBC (million cmm)</Name>
-        <Description/>
-        <GreenMinimumScore>0</GreenMinimumScore>
-        <GreenMaximumScore>0</GreenMaximumScore>
-        <YellowMinimumScore>0</YellowMinimumScore>
-        <YellowMaximumScore>0</YellowMaximumScore>
-    </TestType>
-    <TestType>
         <Name>WBC (per mcL)</Name>
-        <Description/>
-        <GreenMinimumScore>0</GreenMinimumScore>
-        <GreenMaximumScore>0</GreenMaximumScore>
-        <YellowMinimumScore>0</YellowMinimumScore>
-        <YellowMaximumScore>0</YellowMaximumScore>
-    </TestType>
-    <TestType>
-        <Name>Platlets (mL)</Name>
         <Description/>
         <GreenMinimumScore>0</GreenMinimumScore>
         <GreenMaximumScore>0</GreenMaximumScore>

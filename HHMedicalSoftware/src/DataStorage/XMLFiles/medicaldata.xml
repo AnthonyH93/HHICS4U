@@ -22,7 +22,15 @@
         <Tests/>
     </TestEntry>
     <TestEntry>
+        <Type>Platlets (mL)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
         <Type>Potassium (mEq/L)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>RBC (million cmm)</Type>
         <Tests/>
     </TestEntry>
     <TestEntry>
@@ -34,15 +42,7 @@
         <Tests/>
     </TestEntry>
     <TestEntry>
-        <Type>RBC (million cmm)</Type>
-        <Tests/>
-    </TestEntry>
-    <TestEntry>
         <Type>WBC (per mcL)</Type>
-        <Tests/>
-    </TestEntry>
-    <TestEntry>
-        <Type>Platlets (mL)</Type>
         <Tests/>
     </TestEntry>
 </MedicalData>

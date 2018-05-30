@@ -4,6 +4,7 @@ import DataStorage.FileManager;
 import MainClasses.MedicalFunctions;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
+import MainClasses.MainClass;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -142,6 +143,8 @@ public class MainController implements Initializable{
     @FXML
     private Button btnCloseProgram;
             
+    @FXML
+    private Button sortButton;
     
     public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
     public static MedicalTestType selectedTest = null;
@@ -189,14 +192,22 @@ public class MainController implements Initializable{
                 MedicalFunctions.openWarningsScreen();
             }
         });
-            btnCloseProgram.setOnAction(new EventHandler<ActionEvent>() { 
+        btnCloseProgram.setOnAction(new EventHandler<ActionEvent>() { 
             @Override
             public void handle(ActionEvent event) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                FileManager.save();
+                MainClass.stage.close();
+            }     
+        }); 
+        sortButton.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+                sortArrays();
+                updateData();
             }
-            //Platform.exit();       
-            }); 
-            }
+        }); 
+        
+    }
     
     /* Update list view with current array */
     public void updateMedicalTestTypeList () {
@@ -214,6 +225,7 @@ public class MainController implements Initializable{
     public void updateData () {
         updateMedicalTestTypeList();
         updateMedicalTestResultList();
+        sortArrays();
     }
     
     /* Define handler for when test type list is clicked */
@@ -245,6 +257,20 @@ public class MainController implements Initializable{
         }
     }
     
+    public void sortArrays () {
+        for (int i = 0; i < testTypes.size(); i++) {
+            
+            testTypes.get(i).sortTests();
+            
+                for (int j = i + 1; j < testTypes.size(); j++) {
+                    if (testTypes.get(i).getName().compareToIgnoreCase(testTypes.get(j).getName()) > 0) {
+                        MedicalTestType temp = testTypes.get(i);
+                        testTypes.set(i, testTypes.get(j));
+                        testTypes.set(j, temp);
+                    }
+                }
+            }
+    }
     
 }
 

@@ -39,5 +39,15 @@ public class MedicalTestResult {
         return date.toString();
     }
     
+    public boolean compareDates (MedicalTestResult e) {
+        int firstDate = date.toInt();
+        int secondDate = (e.date.toInt());
+        
+        if (firstDate > secondDate) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     
 }

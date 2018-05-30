@@ -118,5 +118,15 @@ public  class MedicalTestType {
         return yellowMaximumScore.get();
     }
     
-    
+    public void sortTests () {
+        for (int i = 0; i < tests.size() - 1; i++) {
+                for (int j = i + 1; j < tests.size(); j++) {
+                    if (tests.get(i).compareDates(tests.get(j))) {
+                        MedicalTestResult temp = tests.get(i);
+                        tests.set(i, tests.get(j));
+                        tests.set(j, temp);
+                    }
+                }
+            }
+    }
 }

@@ -23,7 +23,8 @@
                         <Image url="@Logo.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="saveButton" layoutX="663.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Save" />
+                  <Button fx:id="saveButton" layoutX="709.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Save" />
+                  <Button fx:id="sortButton" layoutX="629.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Sort" />
                </children>
             </Pane>
          </top>
