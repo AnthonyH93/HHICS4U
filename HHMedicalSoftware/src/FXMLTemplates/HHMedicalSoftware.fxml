@@ -115,6 +115,7 @@
                   <Button fx:id="addMedicalTestResultButton" layoutX="199.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Add Result" />
                   <Button fx:id="btnLaunchWarningsScreen" layoutX="640.0" layoutY="10.0" mnemonicParsing="false" text="Launch Warnings Screen" />
                   <Button fx:id="deleteMedicalTestResultButton" layoutX="302.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Delete Result" />
+                  <Button fx:id="btnCloseProgram" layoutX="413.0" layoutY="10.0" mnemonicParsing="false" text="Close Program" />
                </children>
             </Pane>
          </bottom>

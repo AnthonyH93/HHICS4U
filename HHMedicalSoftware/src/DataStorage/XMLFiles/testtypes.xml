@@ -1,23 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <MedicalTypes>
     <TestType>
-        <Name>Iron</Name>
-        <Description>test1</Description>
+        <Name>Calcium (mg/dL)</Name>
+        <Description/>
         <GreenMinimumScore>0</GreenMinimumScore>
         <GreenMaximumScore>0</GreenMaximumScore>
         <YellowMinimumScore>0</YellowMinimumScore>
         <YellowMaximumScore>0</YellowMaximumScore>
     </TestType>
     <TestType>
-        <Name>Cholesterol</Name>
-        <Description>test2</Description>
+        <Name>Chloride (mEq/L)</Name>
+        <Description/>
         <GreenMinimumScore>0</GreenMinimumScore>
         <GreenMaximumScore>0</GreenMaximumScore>
         <YellowMinimumScore>0</YellowMinimumScore>
         <YellowMaximumScore>0</YellowMaximumScore>
     </TestType>
     <TestType>
-        <Name>Hemglobin</Name>
+        <Name>Hemoglobin (g/dL)</Name>
+        <Description/>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+    <TestType>
+        <Name>Phosphorus (mg/dL)</Name>
+        <Description/>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+    <TestType>
+        <Name>Potassium (mEq/L)</Name>
+        <Description/>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+    <TestType>
+        <Name>Sodium (mEq/L)</Name>
+        <Description/>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+    <TestType>
+        <Name>Sugar (mg/dL)</Name>
+        <Description/>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+    <TestType>
+        <Name>RBC (million cmm)</Name>
+        <Description/>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+    <TestType>
+        <Name>WBC (per mcL)</Name>
+        <Description/>
+        <GreenMinimumScore>0</GreenMinimumScore>
+        <GreenMaximumScore>0</GreenMaximumScore>
+        <YellowMinimumScore>0</YellowMinimumScore>
+        <YellowMaximumScore>0</YellowMaximumScore>
+    </TestType>
+    <TestType>
+        <Name>Platlets (mL)</Name>
         <Description/>
         <GreenMinimumScore>0</GreenMinimumScore>
         <GreenMaximumScore>0</GreenMaximumScore>

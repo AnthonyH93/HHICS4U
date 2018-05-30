@@ -10,7 +10,7 @@ import DataTypes.Date;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
 import MainClasses.InputMedicalTestResultScreen;
-import MainClasses.InputMedicalTestTypeScreen;
+import MainClasses.InputMedicalTestTypeScreen;  
 import MainClasses.MainClass;
 import java.net.URL;
 import java.util.ResourceBundle;

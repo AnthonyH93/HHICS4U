@@ -8,6 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -137,6 +138,9 @@ public class MainController implements Initializable{
     
     @FXML
     private Button btnSearch;
+    
+    @FXML
+    private Button btnCloseProgram;
             
     
     public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
@@ -185,7 +189,14 @@ public class MainController implements Initializable{
                 MedicalFunctions.openWarningsScreen();
             }
         });
-       }
+            btnCloseProgram.setOnAction(new EventHandler<ActionEvent>() { 
+            @Override
+            public void handle(ActionEvent event) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+            //Platform.exit();       
+            }); 
+            }
     
     /* Update list view with current array */
     public void updateMedicalTestTypeList () {
@@ -233,6 +244,7 @@ public class MainController implements Initializable{
             System.out.println("Result has not been selected.");
         }
     }
-
+    
+    
 }
 

@@ -29,7 +29,7 @@ public class WarningsAndSuggestionsScreen {
     /* Close window */
     public static void close () {
         stage.close();
-        System.out.println("test");
+        
     }
 }   
 

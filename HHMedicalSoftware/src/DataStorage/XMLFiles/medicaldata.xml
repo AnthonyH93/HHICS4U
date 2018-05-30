@@ -1,34 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <MedicalData>
     <TestEntry>
-        <Type>Iron</Type>
+        <Type>Calcium (mg/dL)</Type>
         <Tests>
             <Test>
-                <Date>34/12/43</Date>
-                <Score>423</Score>
+                <Date>01/01/01</Date>
+                <Score>56</Score>
             </Test>
         </Tests>
     </TestEntry>
     <TestEntry>
-        <Type>Cholesterol</Type>
-        <Tests>
-            <Test>
-                <Date>43/11/12</Date>
-                <Score>33</Score>
-            </Test>
-            <Test>
-                <Date>34/23/23</Date>
-                <Score>324</Score>
-            </Test>
-        </Tests>
+        <Type>Chloride (mEq/L)</Type>
+        <Tests/>
     </TestEntry>
     <TestEntry>
-        <Type>Hemglobin</Type>
-        <Tests>
-            <Test>
-                <Date>12/12/11</Date>
-                <Score>21</Score>
-            </Test>
-        </Tests>
+        <Type>Hemoglobin (g/dL)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>Phosphorus (mg/dL)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>Potassium (mEq/L)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>Sodium (mEq/L)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>Sugar (mg/dL)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>RBC (million cmm)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>WBC (per mcL)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>Platlets (mL)</Type>
+        <Tests/>
     </TestEntry>
 </MedicalData>
