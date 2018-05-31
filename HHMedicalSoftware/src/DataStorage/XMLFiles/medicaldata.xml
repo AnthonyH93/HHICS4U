@@ -5,7 +5,23 @@
         <Tests>
             <Test>
                 <Date>01/01/01</Date>
-                <Score>56</Score>
+                <Score>4</Score>
+            </Test>
+            <Test>
+                <Date>02/01/01</Date>
+                <Score>3</Score>
+            </Test>
+            <Test>
+                <Date>01/02/01</Date>
+                <Score>5</Score>
+            </Test>
+            <Test>
+                <Date>03/01/02</Date>
+                <Score>9</Score>
+            </Test>
+            <Test>
+                <Date>02/02/02</Date>
+                <Score>9</Score>
             </Test>
         </Tests>
     </TestEntry>
@@ -42,7 +58,7 @@
         <Tests/>
     </TestEntry>
     <TestEntry>
-        <Type>WBC (per mcL)</Type>
+        <Type>WBC (per ccm)</Type>
         <Tests/>
     </TestEntry>
 </MedicalData>
