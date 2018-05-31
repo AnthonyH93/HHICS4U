@@ -2,6 +2,7 @@ package DataTypes;
 
 
 import java.util.ArrayList;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
@@ -24,30 +25,30 @@ public  class MedicalTestType {
     */
     private final SimpleStringProperty name;
     private final SimpleStringProperty description;
-    private final SimpleIntegerProperty greenMinimumScore;
-    private final SimpleIntegerProperty greenMaximumScore;
-    private final SimpleIntegerProperty yellowMinimumScore;
-    private final SimpleIntegerProperty yellowMaximumScore;
+    private final SimpleDoubleProperty greenMinimumScore;
+    private final SimpleDoubleProperty greenMaximumScore;
+    private final SimpleDoubleProperty yellowMinimumScore;
+    private final SimpleDoubleProperty yellowMaximumScore;
     
     private ArrayList<MedicalTestResult> tests = new ArrayList<MedicalTestResult>();
 
     /* Define a constructor to give values to properties */
-    public MedicalTestType(String name, String description, int greenMinimumScore, int greenMaximumScore, int yellowMinimumScore, int yellowMaximumScore) {
+    public MedicalTestType(String name, String description, double greenMinimumScore, double greenMaximumScore, double yellowMinimumScore, double yellowMaximumScore) {
         this.name = new SimpleStringProperty(name);
         this.description = new SimpleStringProperty(description);
-        this.greenMinimumScore = new SimpleIntegerProperty(greenMinimumScore);
-        this.greenMaximumScore = new SimpleIntegerProperty(greenMaximumScore);
-        this.yellowMinimumScore = new SimpleIntegerProperty(yellowMinimumScore);
-        this.yellowMaximumScore = new SimpleIntegerProperty(yellowMaximumScore);
+        this.greenMinimumScore = new SimpleDoubleProperty(greenMinimumScore);
+        this.greenMaximumScore = new SimpleDoubleProperty(greenMaximumScore);
+        this.yellowMinimumScore = new SimpleDoubleProperty(yellowMinimumScore);
+        this.yellowMaximumScore = new SimpleDoubleProperty(yellowMaximumScore);
     }
     
-    public MedicalTestType(String name, String description, int greenMinimumScore, int greenMaximumScore, int yellowMinimumScore, int yellowMaximumScore, ArrayList<MedicalTestResult> tests) {
+    public MedicalTestType(String name, String description, double greenMinimumScore, double greenMaximumScore, double yellowMinimumScore, double yellowMaximumScore, ArrayList<MedicalTestResult> tests) {
         this.name = new SimpleStringProperty(name);
         this.description = new SimpleStringProperty(description);
-        this.greenMinimumScore = new SimpleIntegerProperty(greenMinimumScore);
-        this.greenMaximumScore = new SimpleIntegerProperty(greenMaximumScore);
-        this.yellowMinimumScore = new SimpleIntegerProperty(yellowMinimumScore);
-        this.yellowMaximumScore = new SimpleIntegerProperty(yellowMaximumScore);
+        this.greenMinimumScore = new SimpleDoubleProperty(greenMinimumScore);
+        this.greenMaximumScore = new SimpleDoubleProperty(greenMaximumScore);
+        this.yellowMinimumScore = new SimpleDoubleProperty(yellowMinimumScore);
+        this.yellowMaximumScore = new SimpleDoubleProperty(yellowMaximumScore);
         this.tests = tests;
     }
 
@@ -55,19 +56,19 @@ public  class MedicalTestType {
         name.set(n);
     }
     
-    public void setGreenMinimumScore (int g) {
+    public void setGreenMinimumScore (double g) {
         greenMinimumScore.set(g);
     }
     
-    public void setGreenMaximumScore (int g) {
+    public void setGreenMaximumScore (double g) {
         greenMinimumScore.set(g);
     }
     
-    public void setYellowMinimumScore (int g) {
+    public void setYellowMinimumScore (double g) {
         greenMinimumScore.set(g);
     }
     
-    public void setYellowMaximumScore (int g) {
+    public void setYellowMaximumScore (double g) {
         greenMinimumScore.set(g);
     }
     
@@ -102,19 +103,19 @@ public  class MedicalTestType {
         return name.getValue();
     }
 
-    public int getGreenMinimumScore() {
+    public double getGreenMinimumScore() {
         return greenMinimumScore.get();
     }
 
-    public int getGreenMaximumScore() {
+    public double getGreenMaximumScore() {
         return greenMaximumScore.get();
     }
 
-    public int getYellowMinimumScore() {
+    public double getYellowMinimumScore() {
         return yellowMinimumScore.get();
     }
 
-    public int getYellowMaximumScore() {
+    public double getYellowMaximumScore() {
         return yellowMaximumScore.get();
     }
     

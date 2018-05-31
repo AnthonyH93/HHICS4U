@@ -3,81 +3,81 @@
     <TestType>
         <Name>Calcium (mg/dL)</Name>
         <Description/>
-        <GreenMinimumScore>9</GreenMinimumScore>
-        <GreenMaximumScore>11</GreenMaximumScore>
-        <YellowMinimumScore>8</YellowMinimumScore>
-        <YellowMaximumScore>12</YellowMaximumScore>
+        <GreenMinimumScore>9.0</GreenMinimumScore>
+        <GreenMaximumScore>11.0</GreenMaximumScore>
+        <YellowMinimumScore>8.0</YellowMinimumScore>
+        <YellowMaximumScore>12.0</YellowMaximumScore>
     </TestType>
     <TestType>
         <Name>Chloride (mEq/L)</Name>
         <Description/>
-        <GreenMinimumScore>98</GreenMinimumScore>
-        <GreenMaximumScore>106</GreenMaximumScore>
-        <YellowMinimumScore>90</YellowMinimumScore>
-        <YellowMaximumScore>115</YellowMaximumScore>
+        <GreenMinimumScore>98.0</GreenMinimumScore>
+        <GreenMaximumScore>106.0</GreenMaximumScore>
+        <YellowMinimumScore>90.0</YellowMinimumScore>
+        <YellowMaximumScore>115.0</YellowMaximumScore>
     </TestType>
     <TestType>
         <Name>Hemoglobin (g/dL)</Name>
         <Description/>
-        <GreenMinimumScore>12</GreenMinimumScore>
-        <GreenMaximumScore>18</GreenMaximumScore>
-        <YellowMinimumScore>10</YellowMinimumScore>
-        <YellowMaximumScore>20</YellowMaximumScore>
+        <GreenMinimumScore>12.0</GreenMinimumScore>
+        <GreenMaximumScore>18.0</GreenMaximumScore>
+        <YellowMinimumScore>10.0</YellowMinimumScore>
+        <YellowMaximumScore>20.0</YellowMaximumScore>
     </TestType>
     <TestType>
         <Name>Phosphorus (mg/dL)</Name>
         <Description/>
-        <GreenMinimumScore>3</GreenMinimumScore>
-        <GreenMaximumScore>4</GreenMaximumScore>
-        <YellowMinimumScore>2</YellowMinimumScore>
-        <YellowMaximumScore>5</YellowMaximumScore>
+        <GreenMinimumScore>3.0</GreenMinimumScore>
+        <GreenMaximumScore>4.0</GreenMaximumScore>
+        <YellowMinimumScore>2.0</YellowMinimumScore>
+        <YellowMaximumScore>5.0</YellowMaximumScore>
     </TestType>
     <TestType>
         <Name>Platlets (mL)</Name>
         <Description/>
-        <GreenMinimumScore>150000</GreenMinimumScore>
-        <GreenMaximumScore>400000</GreenMaximumScore>
-        <YellowMinimumScore>100000</YellowMinimumScore>
-        <YellowMaximumScore>500000</YellowMaximumScore>
+        <GreenMinimumScore>150000.0</GreenMinimumScore>
+        <GreenMaximumScore>400000.0</GreenMaximumScore>
+        <YellowMinimumScore>100000.0</YellowMinimumScore>
+        <YellowMaximumScore>500000.0</YellowMaximumScore>
     </TestType>
     <TestType>
         <Name>Potassium (mEq/L)</Name>
         <Description/>
-        <GreenMinimumScore>4</GreenMinimumScore>
-        <GreenMaximumScore>5</GreenMaximumScore>
-        <YellowMinimumScore>3</YellowMinimumScore>
-        <YellowMaximumScore>6</YellowMaximumScore>
+        <GreenMinimumScore>4.0</GreenMinimumScore>
+        <GreenMaximumScore>5.0</GreenMaximumScore>
+        <YellowMinimumScore>3.0</YellowMinimumScore>
+        <YellowMaximumScore>6.0</YellowMaximumScore>
     </TestType>
     <TestType>
         <Name>RBC (million cmm)</Name>
         <Description/>
-        <GreenMinimumScore>4</GreenMinimumScore>
-        <GreenMaximumScore>6</GreenMaximumScore>
-        <YellowMinimumScore>7</YellowMinimumScore>
-        <YellowMaximumScore>3</YellowMaximumScore>
+        <GreenMinimumScore>4.0</GreenMinimumScore>
+        <GreenMaximumScore>6.0</GreenMaximumScore>
+        <YellowMinimumScore>7.0</YellowMinimumScore>
+        <YellowMaximumScore>3.0</YellowMaximumScore>
     </TestType>
     <TestType>
         <Name>Sodium (mEq/L)</Name>
         <Description/>
-        <GreenMinimumScore>135</GreenMinimumScore>
-        <GreenMaximumScore>145</GreenMaximumScore>
-        <YellowMinimumScore>134</YellowMinimumScore>
-        <YellowMaximumScore>150</YellowMaximumScore>
+        <GreenMinimumScore>135.0</GreenMinimumScore>
+        <GreenMaximumScore>145.0</GreenMaximumScore>
+        <YellowMinimumScore>134.0</YellowMinimumScore>
+        <YellowMaximumScore>150.0</YellowMaximumScore>
     </TestType>
     <TestType>
         <Name>Sugar (mg/dL)</Name>
         <Description/>
-        <GreenMinimumScore>70</GreenMinimumScore>
-        <GreenMaximumScore>99</GreenMaximumScore>
-        <YellowMinimumScore>60</YellowMinimumScore>
-        <YellowMaximumScore>115</YellowMaximumScore>
+        <GreenMinimumScore>70.0</GreenMinimumScore>
+        <GreenMaximumScore>99.0</GreenMaximumScore>
+        <YellowMinimumScore>60.0</YellowMinimumScore>
+        <YellowMaximumScore>115.0</YellowMaximumScore>
     </TestType>
     <TestType>
         <Name>WBC (per ccm)</Name>
         <Description/>
-        <GreenMinimumScore>4300</GreenMinimumScore>
-        <GreenMaximumScore>10800</GreenMaximumScore>
-        <YellowMinimumScore>3800</YellowMinimumScore>
-        <YellowMaximumScore>12000</YellowMaximumScore>
+        <GreenMinimumScore>4300.0</GreenMinimumScore>
+        <GreenMaximumScore>10800.0</GreenMaximumScore>
+        <YellowMinimumScore>3800.0</YellowMinimumScore>
+        <YellowMaximumScore>12000.0</YellowMaximumScore>
     </TestType>
 </MedicalTypes>

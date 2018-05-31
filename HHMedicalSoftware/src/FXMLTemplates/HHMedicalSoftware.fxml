@@ -96,12 +96,12 @@
                   </AnchorPane>
                 <AnchorPane fx:id="testResultChartContainer" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <LineChart fx:id="testResultChart" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <LineChart fx:id="testResultChart" legendVisible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <xAxis>
-                            <CategoryAxis label="Date" side="BOTTOM" />
+                            <CategoryAxis fx:id="dateAxis" animated="false" label="Date" side="BOTTOM" />
                           </xAxis>
                           <yAxis>
-                            <NumberAxis label="Score" side="LEFT" />
+                            <NumberAxis fx:id="scoreAxis" label="Score" side="LEFT" />
                           </yAxis>
                         </LineChart>
                      </children>

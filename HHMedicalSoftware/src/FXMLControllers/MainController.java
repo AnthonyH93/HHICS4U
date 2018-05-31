@@ -1,6 +1,7 @@
 package FXMLControllers;
 
 import DataStorage.FileManager;
+import DataTypes.Date;
 import MainClasses.MedicalFunctions;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
@@ -14,7 +15,10 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SplitPane;
@@ -81,7 +85,7 @@ public class MainController implements Initializable{
     private AnchorPane testResultChartContainer;
 
     @FXML
-    private LineChart<?, ?> testResultChart;
+    private LineChart<String, Number> testResultChart;
 
     @FXML
     private AnchorPane testDateListContainer;
@@ -146,6 +150,12 @@ public class MainController implements Initializable{
     @FXML
     private Button sortButton;
     
+    @FXML
+    private CategoryAxis dateAxis;
+    
+    @FXML
+    private NumberAxis scoreAxis;
+    
     public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
     public static MedicalTestType selectedTest = null;
     public static MedicalTestResult selectedResult = null;
@@ -206,7 +216,6 @@ public class MainController implements Initializable{
                 updateData();
             }
         }); 
-        
     }
     
     /* Update list view with current array */
@@ -216,6 +225,7 @@ public class MainController implements Initializable{
     public void updateMedicalTestResultList () {
         try {
             testDateListView.getItems().setAll(selectedTest.getTests());
+            updateChart();
         } catch (NullPointerException n) {
             System.out.print("User has not created any results yet.");
         }
@@ -226,6 +236,11 @@ public class MainController implements Initializable{
         updateMedicalTestTypeList();
         updateMedicalTestResultList();
         sortArrays();
+        try {
+            updateChart();
+        } catch (NullPointerException e) {
+            System.out.println("Test has not been selected yet.");
+        }
     }
     
     /* Define handler for when test type list is clicked */
@@ -272,5 +287,19 @@ public class MainController implements Initializable{
             }
     }
     
+    public void updateChart () {
+        testResultChart.getData().clear();
+        testResultChart.setTitle(selectedTest.getName());
+        
+        XYChart.Series chartData = new XYChart.Series();
+        chartData.setName("Result Chart");
+        
+        for (int i = 0; i < selectedTest.getTests().size(); i++) {
+            chartData.getData().add(new XYChart.Data(selectedTest.getTests().get(i).getDate().toString(), selectedTest.getTests().get(i).getScore()));
+        }
+        
+        testResultChart.getData().add(chartData);
+        System.out.println("called");
+    }
 }
 
