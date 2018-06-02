@@ -156,6 +156,9 @@ public class MainController implements Initializable{
     @FXML
     private NumberAxis scoreAxis;
     
+    @FXML
+    private Button btnOpenDefinitions;
+    
     public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
     public static MedicalTestType selectedTest = null;
     public static MedicalTestResult selectedResult = null;
@@ -202,6 +205,15 @@ public class MainController implements Initializable{
                 MedicalFunctions.openWarningsScreen();
             }
         });
+        /* btnOpenDefinitions.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+                MedicalFunctions.openDefinitionsScreen();
+            }
+        });
+            */    
+                
+                
         btnCloseProgram.setOnAction(new EventHandler<ActionEvent>() { 
             @Override
             public void handle(ActionEvent event) {

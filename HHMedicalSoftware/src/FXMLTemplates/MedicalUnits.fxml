@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="UnitsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" height="152.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <ImageView fx:id="UnitsLogo" fitHeight="47.0" fitWidth="394.0">
+         <image>
+            <Image url="@../Pictures/HH%20LOGO.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="80.0" layoutX="151.0" layoutY="59.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="298.0" />
+      <Label fx:id="lbl1" layoutX="204.0" layoutY="77.0" text="Medical Units" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" height="265.0" layoutY="139.0" stroke="BLACK" strokeType="INSIDE" width="600.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.04214559386973179" />
+                  <Stop color="WHITE" offset="0.8314176245210727" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label fx:id="lab2" layoutX="52.0" layoutY="180.0" text="Medical units are different for each test type, this can get quite confusing so the " textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl3" layoutX="22.0" layoutY="200.0" text="following is a list of units throughout the program which may not be common knowledge." textFill="#fffdfd">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl4" layoutX="46.0" layoutY="297.0" text="2. mg/dL - milligrams per decilitre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl5" layoutX="27.0" layoutY="252.0" text="1. mEq/L - milliequivalents of solute per litre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl6" layoutX="27.0" layoutY="340.0" text="3. g/dL - grams per decilitre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl7" layoutX="349.0" layoutY="252.0" text="4. mL - millilitre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl8" layoutX="325.0" layoutY="297.0" text="5. per cmm - per cubic millimetre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl9" layoutX="265.0" layoutY="340.0" text="6. million per cmm - million per cubic millimetre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCloseScreen" layoutX="257.0" layoutY="367.0" mnemonicParsing="false" text="Close Screen" />
+   </children>
+</Pane>

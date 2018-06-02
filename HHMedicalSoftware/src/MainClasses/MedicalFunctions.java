@@ -43,4 +43,11 @@ public class MedicalFunctions {
             Logger.getLogger(MedicalFunctions.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+   /* public static void openDefinitionsScreen() {
+        try {
+           MedicalDefinitionsScreen screen = new MedicalDefinitionsScreen();
+        } catch (IOException ex) {
+            Logger.getLogger(MedicalFunctions.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    } */
 }
