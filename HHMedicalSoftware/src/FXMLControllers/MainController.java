@@ -205,13 +205,13 @@ public class MainController implements Initializable{
                 MedicalFunctions.openWarningsScreen();
             }
         });
-        /* btnOpenDefinitions.setOnAction(new EventHandler<ActionEvent> () {
+         btnOpenDefinitions.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
                 MedicalFunctions.openDefinitionsScreen();
             }
         });
-            */    
+                
                 
                 
         btnCloseProgram.setOnAction(new EventHandler<ActionEvent>() { 

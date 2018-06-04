@@ -10,18 +10,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:id="UnitsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="UnitsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLControllers.MedicalUnitsController">
    <children>
       <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" height="152.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
-      <ImageView fx:id="UnitsLogo" fitHeight="47.0" fitWidth="394.0">
-         <image>
-            <Image url="@../Pictures/HH%20LOGO.jpg" />
-         </image>
-      </ImageView>
-      <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="80.0" layoutX="151.0" layoutY="59.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="298.0" />
-      <Label fx:id="lbl1" layoutX="204.0" layoutY="77.0" text="Medical Units" textFill="WHITE" underline="true">
+      <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="125.0" layoutX="131.0" layoutY="15.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="338.0" />
+      <Label fx:id="lbl1" layoutX="145.0" layoutY="43.0" text="Medical Units" textFill="WHITE" underline="true">
          <font>
-            <Font name="System Bold" size="30.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
       <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" height="265.0" layoutY="139.0" stroke="BLACK" strokeType="INSIDE" width="600.0">
@@ -77,5 +72,10 @@
          </font>
       </Label>
       <Button fx:id="btnCloseScreen" layoutX="257.0" layoutY="367.0" mnemonicParsing="false" text="Close Screen" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

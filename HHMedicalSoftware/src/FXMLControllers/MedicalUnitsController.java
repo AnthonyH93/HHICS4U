@@ -1,6 +1,6 @@
 package FXMLControllers;
 
-//import MainClasses.MedicalDefinitionsScreen;
+import MainClasses.MedicalDefinitionsScreen;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -18,9 +18,9 @@ import javafx.scene.shape.Rectangle;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-/*public class MedicalUnitsController implements Initializable{
+public class MedicalUnitsController implements Initializable{
 /* Inject all FXML Components */
-   /* @FXML
+    @FXML
     private Pane UnitsPane;
 
     @FXML
@@ -65,11 +65,12 @@ import javafx.scene.shape.Rectangle;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         /* When back button is pressed close window */
-        /*btnCloseScreen.setOnAction(new EventHandler<ActionEvent> () {
+        btnCloseScreen.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
                 MedicalDefinitionsScreen.close();
             }  
         });
-    }*/
+    }
+}
 

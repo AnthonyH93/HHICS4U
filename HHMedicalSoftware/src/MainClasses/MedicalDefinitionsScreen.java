@@ -12,10 +12,10 @@ import javafx.stage.Stage;
  */
 
 
-/*public class MedicalDefinitionsScreen {
+public class MedicalDefinitionsScreen {
   static Stage stage;
     
-    /* Create new window from custom fxml template 
+  
     public MedicalDefinitionsScreen() throws IOException {
         FXMLLoader loader = new FXMLLoader (getClass().getResource("../FXMLTemplates/MedicalUnits.fxml"));
         Parent root = loader.load();
@@ -27,10 +27,11 @@ import javafx.stage.Stage;
         stage.show();
     }
     
-    /* Close window 
-    /* public static void close () {
+    /* Close window */
+     public static void close () {
         stage.close();
         
       
-}*/
+}
+}
 

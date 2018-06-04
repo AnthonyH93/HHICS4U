@@ -1,5 +1,7 @@
 package FXMLControllers;
 
+import DataTypes.MedicalTestResult;
+import DataTypes.MedicalTestType;
 import MainClasses.WarningsAndSuggestionsScreen;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -72,8 +74,29 @@ public class WarningsAndSuggestionsController implements Initializable{
                 WarningsAndSuggestionsScreen.close();
             }  
         });
-        
+       btnSearch.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+            searchArrays();  
+           
+       }
+    });
+    
+    
+}
+ public void searchArrays(){
+    for (int x=0; x<MainController.testTypes.size(); x++){
+        for (int y=0; y<MainController.testTypes.get(x).getTests().size(); y++){
+            MedicalTestType type = MainController.testTypes.get(x);
+            MedicalTestResult result = MainController.testTypes.get(x).getTests().get(y);
+            
+            if (result.getScore()<=type.getGreenMaximumScore() && result.getScore()>= type.getGreenMinimumScore()){
+                
+            }
+            else if (result.getScore()<=type.getYellowMaximumScore() && result.getScore()>= type.getYellowMinimumScore()){
+               
+        }
     }
-    
-    
+}   
+}
 }
