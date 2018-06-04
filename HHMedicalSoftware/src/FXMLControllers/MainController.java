@@ -2,6 +2,7 @@ package FXMLControllers;
 
 import DataStorage.FileManager;
 import DataTypes.Date;
+import DataTypes.Flag;
 import MainClasses.MedicalFunctions;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
@@ -20,6 +21,7 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextArea;
@@ -30,6 +32,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.util.Callback;
 
 /**
  *  File Name: MainController
@@ -227,7 +231,7 @@ public class MainController implements Initializable{
                 sortArrays();
                 updateData();
             }
-        }); 
+        });
     }
     
     /* Update list view with current array */
@@ -315,3 +319,18 @@ public class MainController implements Initializable{
     }
 }
 
+class resultCell extends ListCell<MedicalTestResult> {
+    @Override
+    protected void updateItem (MedicalTestResult result, boolean empty) {
+        super.updateItem(result, empty);
+        setText(result.toString());
+        if (result.getFlag() == Flag.green) {
+            setTextFill(Color.GREEN);
+        } else if (result.getFlag() == Flag.yellow) {
+            setTextFill(Color.YELLOW);
+        } else {
+            setTextFill(Color.RED);
+        }
+        
+    }
+}

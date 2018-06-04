@@ -17,6 +17,7 @@ public class MedicalTestResult {
     /* Create class for medical test results that contains the date and the score */
     private Date date;
     private int score;
+    private Flag flag;
 
     /* Constructor that requires a date and score */
     public MedicalTestResult(Date date, int score) {
@@ -33,6 +34,14 @@ public class MedicalTestResult {
         return score;
     }
 
+    public Flag getFlag() {
+        return flag;
+    }
+    
+    public void setFlag(Flag flag) {
+        this.flag = flag;
+    }
+    
     /* Override default toString method to instead output string in form "day/month/year" */
     @Override
     public String toString() {
