@@ -13,8 +13,7 @@
 <Pane fx:id="UnitsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLControllers.MedicalUnitsController">
    <children>
       <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" height="152.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
-      <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="125.0" layoutX="131.0" layoutY="15.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="338.0" />
-      <Label fx:id="lbl1" layoutX="145.0" layoutY="43.0" text="Medical Units" textFill="WHITE" underline="true">
+      <Label fx:id="lbl1" layoutX="145.0" layoutY="69.0" text="Medical Units" textFill="WHITE" underline="true">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
@@ -72,10 +71,11 @@
          </font>
       </Label>
       <Button fx:id="btnCloseScreen" layoutX="257.0" layoutY="367.0" mnemonicParsing="false" text="Close Screen" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="45.0" fitWidth="320.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Logo.png" />
          </image>
       </ImageView>
+      <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" layoutX="131.0" layoutY="54.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="338.0" />
    </children>
 </Pane>
