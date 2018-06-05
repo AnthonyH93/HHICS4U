@@ -170,7 +170,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
         addButton.setOnAction(new EventHandler<ActionEvent> () {
                 @Override
                 public void handle(ActionEvent event) {
-                    testTypeTable.getItems().add(new MedicalTestType("", "", 0, 0, 0, 0));
+                    testTypeTable.getItems().add(new MedicalTestType("", 0, 0, 0, 0));
                 }
             });
         

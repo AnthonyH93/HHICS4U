@@ -24,7 +24,6 @@ public  class MedicalTestType {
      * a name, description and an array to store the different tests
     */
     private final SimpleStringProperty name;
-    private final SimpleStringProperty description;
     private final SimpleDoubleProperty greenMinimumScore;
     private final SimpleDoubleProperty greenMaximumScore;
     private final SimpleDoubleProperty yellowMinimumScore;
@@ -33,18 +32,16 @@ public  class MedicalTestType {
     private ArrayList<MedicalTestResult> tests = new ArrayList<MedicalTestResult>();
 
     /* Define a constructor to give values to properties */
-    public MedicalTestType(String name, String description, double greenMinimumScore, double greenMaximumScore, double yellowMinimumScore, double yellowMaximumScore) {
+    public MedicalTestType(String name, double greenMinimumScore, double greenMaximumScore, double yellowMinimumScore, double yellowMaximumScore) {
         this.name = new SimpleStringProperty(name);
-        this.description = new SimpleStringProperty(description);
         this.greenMinimumScore = new SimpleDoubleProperty(greenMinimumScore);
         this.greenMaximumScore = new SimpleDoubleProperty(greenMaximumScore);
         this.yellowMinimumScore = new SimpleDoubleProperty(yellowMinimumScore);
         this.yellowMaximumScore = new SimpleDoubleProperty(yellowMaximumScore);
     }
     
-    public MedicalTestType(String name, String description, double greenMinimumScore, double greenMaximumScore, double yellowMinimumScore, double yellowMaximumScore, ArrayList<MedicalTestResult> tests) {
+    public MedicalTestType(String name, double greenMinimumScore, double greenMaximumScore, double yellowMinimumScore, double yellowMaximumScore, ArrayList<MedicalTestResult> tests) {
         this.name = new SimpleStringProperty(name);
-        this.description = new SimpleStringProperty(description);
         this.greenMinimumScore = new SimpleDoubleProperty(greenMinimumScore);
         this.greenMaximumScore = new SimpleDoubleProperty(greenMaximumScore);
         this.yellowMinimumScore = new SimpleDoubleProperty(yellowMinimumScore);
@@ -80,11 +77,6 @@ public  class MedicalTestType {
     /* Return the name of the test type */
     public String getName() {
         return name.getValue();
-    }
-    
-    /* Return the description of the test type */
-    public String getDescription() {
-        return description.getValue();
     }
     
     /* Define method to add a new test to the array */

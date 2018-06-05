@@ -53,13 +53,12 @@ public class FileManager {
             for (int x = 0; x < testTypeList.getLength(); x++) {
                 Element testType = (Element) testTypeList.item(x);
                 String name = testType.getElementsByTagName("Name").item(0).getTextContent();
-                String description = testType.getElementsByTagName("Description").item(0).getTextContent();
                 double greenMinimumScore = Double.parseDouble(testType.getElementsByTagName("GreenMinimumScore").item(0).getTextContent());
                 double greenMaximumScore = Double.parseDouble(testType.getElementsByTagName("GreenMaximumScore").item(0).getTextContent());
                 double yellowMinimumScore = Double.parseDouble(testType.getElementsByTagName("YellowMinimumScore").item(0).getTextContent());
                 double yellowMaximumScore = Double.parseDouble(testType.getElementsByTagName("YellowMaximumScore").item(0).getTextContent());
                 
-                MainController.testTypes.add(new MedicalTestType(name, description, greenMinimumScore, greenMaximumScore, yellowMinimumScore, yellowMaximumScore));
+                MainController.testTypes.add(new MedicalTestType(name, greenMinimumScore, greenMaximumScore, yellowMinimumScore, yellowMaximumScore));
                 
             }
             
@@ -174,9 +173,6 @@ public class FileManager {
                 Element name = doc.createElement("Name");
                 name.setTextContent(MainController.testTypes.get(x).getName());
                 
-                Element description = doc.createElement("Description");
-                description.setTextContent(MainController.testTypes.get(x).getDescription());
-                
                 Element greenMinimumScore = doc.createElement("GreenMinimumScore");
                 greenMinimumScore.setTextContent(Double.toString(MainController.testTypes.get(x).getGreenMinimumScore()));
                 
@@ -191,7 +187,6 @@ public class FileManager {
                 
                 
                 testType.appendChild(name);
-                testType.appendChild(description);
                 testType.appendChild(greenMinimumScore);
                 testType.appendChild(greenMaximumScore);
                 testType.appendChild(yellowMinimumScore);

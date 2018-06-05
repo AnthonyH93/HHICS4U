@@ -276,8 +276,6 @@ public class MainController implements Initializable{
             StringBuilder output = new StringBuilder();
             output.append("Test:         " + selectedTest.getName());
             output.append("\n");
-            output.append("Description: " + selectedTest.getDescription());
-            output.append("\n");
             output.append("Test Date:    " + selectedResult.getDate());
             output.append("\n\n");
             output.append("Score:        " + selectedResult.getScore());
