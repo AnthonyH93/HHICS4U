@@ -3,6 +3,7 @@ package FXMLControllers;
 import DataTypes.Flag;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
+import static FXMLControllers.MainController.testTypes;
 import MainClasses.WarningsAndSuggestionsScreen;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -62,7 +63,10 @@ public class WarningsAndSuggestionsController implements Initializable{
     private Pane mainPane;
 
     @FXML
-    private TextArea txtWarnings;
+    private TextArea txtYellow;
+    
+    @FXML
+    private TextArea txtRed;
     
     
     
@@ -82,6 +86,8 @@ public class WarningsAndSuggestionsController implements Initializable{
            
        }
     });
+       txtYellow.setText("These textboxes will display all medical" +"\n" +"data that falls into the respecive yellow or red" +"\n"
+       +"zones. Once the search button is pressed," +"\n" +"this text will be removed and updated with" +"\n" +"red/yellow tests. Green tests don't appear!");
     
     
 }
@@ -95,8 +101,10 @@ public class WarningsAndSuggestionsController implements Initializable{
                     result.setFlag(Flag.green);
                 } else if (result.getScore()<=type.getYellowMaximumScore() && result.getScore()>= type.getYellowMinimumScore()){
                     result.setFlag(Flag.yellow);
+                    txtYellow.setText("Yellow Zone: " + testTypes.get(x) +"\n");
                 } else {
                     result.setFlag(Flag.red);
+                    txtRed.setText("Red Zone: " + testTypes.get(x) +"\n");
                 }
             }
         }   

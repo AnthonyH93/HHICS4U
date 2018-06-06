@@ -31,7 +31,12 @@
     </TestEntry>
     <TestEntry>
         <Type>Hemoglobin (g/dL)</Type>
-        <Tests/>
+        <Tests>
+            <Test>
+                <Date>01/01/01</Date>
+                <Score>11</Score>
+            </Test>
+        </Tests>
     </TestEntry>
     <TestEntry>
         <Type>Phosphorus (mg/dL)</Type>
