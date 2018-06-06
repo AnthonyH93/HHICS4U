@@ -7,6 +7,7 @@ import MainClasses.MedicalFunctions;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
 import MainClasses.MainClass;
+import MainClasses.MainScreen;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -222,7 +223,7 @@ public class MainController implements Initializable{
             @Override
             public void handle(ActionEvent event) {
                 FileManager.save();
-                MainClass.stage.close();
+                MainScreen.close();
             }     
         }); 
         sortButton.setOnAction(new EventHandler<ActionEvent> () {

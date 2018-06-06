@@ -29,14 +29,15 @@ public class MainClass extends Application {
     /* Create variable to hold the controller of the scene */
     public static MainController controller;
     public static Stage stage;
+    public static String currentUsername;
     
     @Override
     public void start(Stage primaryStage) throws IOException {
         /* Create new window from custom fxml template */
-        FXMLLoader loader = new FXMLLoader (getClass().getResource("../FXMLTemplates/HHMedicalSoftware.fxml"));
+        FXMLLoader loader = new FXMLLoader (getClass().getResource("../FXMLTemplates/LoginScreen.fxml"));
         Parent root = loader.load();
         
-        Scene scene = new Scene(root, 800, 500);
+        Scene scene = new Scene(root, 640, 400);
     
         primaryStage.setTitle("HH Medical Software");
         primaryStage.setScene(scene);
@@ -44,10 +45,10 @@ public class MainClass extends Application {
         
         stage = primaryStage;
         
-        controller = loader.getController();
+        //controller = loader.getController();
         
-        FileManager.open();
-        controller.updateData();
+        //FileManager.open();
+        //controller.updateData();
         
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent> () {
             @Override

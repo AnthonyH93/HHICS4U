@@ -86,8 +86,8 @@ public class WarningsAndSuggestionsController implements Initializable{
            
        }
     });
-       txtYellow.setText("These textboxes will display all medical" +"\n" +"data that falls into the respecive yellow or red" +"\n"
-       +"zones. Once the search button is pressed," +"\n" +"this text will be removed and updated with" +"\n" +"red/yellow tests. Green tests don't appear!");
+       txtYellow.setText("These textboxes will display all medical data that falls into the respecive yellow or red"
+               + " zones. Once the search button is pressed, this text will be removed and updated with red/yellow tests. Green tests don't appear!");
     
     
 }

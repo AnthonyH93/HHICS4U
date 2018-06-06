@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #191919;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLControllers.LoginScreenController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #191919;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLControllers.RegisterScreenController">
    <children>
       <BorderPane prefHeight="0.0" prefWidth="600.0">
          <top>
@@ -35,7 +35,7 @@
                   </ImageView>
                   <VBox fx:id="centerBox" alignment="CENTER" fillWidth="false" layoutX="40.0" layoutY="51.0" prefHeight="238.0" prefWidth="520.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 3;">
                      <children>
-                        <Label fx:id="signInLabel" alignment="CENTER" prefHeight="68.0" prefWidth="265.0" text="Sign In" textAlignment="CENTER">
+                        <Label fx:id="signInLabel" alignment="CENTER" prefHeight="68.0" prefWidth="265.0" text="Register" textAlignment="CENTER">
                            <font>
                               <Font name="Cambria" size="31.0" />
                            </font>
@@ -48,7 +48,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <HBox fx:id="userNameBox" prefHeight="0.0" prefWidth="514.0">
+                        <HBox fx:id="userNameBox" prefHeight="142.0" prefWidth="520.0">
                            <children>
                               <Label fx:id="userNameLabel" text="Username:">
                                  <font>
@@ -88,14 +88,9 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <HBox fx:id="buttonBox" prefHeight="25.0" prefWidth="226.0">
+                        <HBox fx:id="buttonBox" prefHeight="25.0" prefWidth="70.0">
                            <children>
                               <Button fx:id="registerButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Register" />
-                              <Button fx:id="enterButton" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Enter" textAlignment="CENTER">
-                                 <HBox.margin>
-                                    <Insets left="100.0" />
-                                 </HBox.margin>
-                              </Button>
                            </children>
                            <VBox.margin>
                               <Insets bottom="20.0" top="4.0" />
@@ -107,5 +102,6 @@
             </Pane>
          </center>
       </BorderPane>
+      <Label text="Label" />
    </children>
 </VBox>

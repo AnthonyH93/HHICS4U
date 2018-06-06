@@ -32,6 +32,6 @@ public class MedicalDefinitionsScreen {
         stage.close();
         
       
-}
+    }
 }
 

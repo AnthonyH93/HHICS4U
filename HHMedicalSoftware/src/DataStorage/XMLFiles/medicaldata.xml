@@ -36,6 +36,10 @@
                 <Date>01/01/01</Date>
                 <Score>11</Score>
             </Test>
+            <Test>
+                <Date>05/09/03</Date>
+                <Score>12</Score>
+            </Test>
         </Tests>
     </TestEntry>
     <TestEntry>

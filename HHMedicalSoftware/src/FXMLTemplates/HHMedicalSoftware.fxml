@@ -23,8 +23,9 @@
                         <Image url="@Logo.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="saveButton" layoutX="709.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Save" />
-                  <Button fx:id="sortButton" layoutX="629.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Sort" />
+                  <Button fx:id="saveButton" layoutX="598.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Save" />
+                  <Button fx:id="sortButton" layoutX="512.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Sort" />
+                  <Button fx:id="btnCloseProgram" layoutX="684.0" layoutY="25.0" mnemonicParsing="false" text="Close Program" />
                </children>
             </Pane>
          </top>
@@ -114,10 +115,9 @@
                <children>
                   <Button fx:id="addMedicalTestTypeButton" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" text="Medical Test Type Manager" />
                   <Button fx:id="addMedicalTestResultButton" layoutX="199.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Add Result" />
-                  <Button fx:id="btnLaunchWarningsScreen" layoutX="640.0" layoutY="10.0" mnemonicParsing="false" text="Launch Warnings Screen" />
-                  <Button fx:id="deleteMedicalTestResultButton" layoutX="302.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Delete Result" />
-                  <Button fx:id="btnCloseProgram" layoutX="413.0" layoutY="10.0" mnemonicParsing="false" text="Close Program" />
-                  <Button fx:id="btnOpenDefinitions" layoutX="522.0" layoutY="10.0" mnemonicParsing="false" text="Open Definitions" />
+                  <Button fx:id="btnLaunchWarningsScreen" layoutX="612.0" layoutY="10.0" mnemonicParsing="false" text="Launch Warnings Screen" />
+                  <Button fx:id="deleteMedicalTestResultButton" layoutX="296.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Delete Result" />
+                  <Button fx:id="btnOpenDefinitions" layoutX="456.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" text="Open Definitions" />
                </children>
             </Pane>
          </bottom>
