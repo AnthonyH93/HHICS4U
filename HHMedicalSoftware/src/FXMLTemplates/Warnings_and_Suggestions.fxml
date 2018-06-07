@@ -37,6 +37,6 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtRed" layoutX="41.0" layoutY="233.0" prefHeight="124.0" prefWidth="252.0" wrapText="true" />
+      <TextArea fx:id="txtRed" layoutX="40.0" layoutY="238.0" prefHeight="119.0" prefWidth="252.0" wrapText="true" />
    </children>
 </Pane>

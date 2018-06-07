@@ -82,7 +82,8 @@ public class WarningsAndSuggestionsController implements Initializable{
        btnSearch.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
-            searchArrays();  
+            searchArrays();
+            
            
        }
     });
@@ -93,7 +94,7 @@ public class WarningsAndSuggestionsController implements Initializable{
 }
     public void searchArrays () {
         for (int x=0; x<MainController.testTypes.size(); x++){
-            for (int y=0; y<MainController.testTypes.get(x).getTests().size(); y++){
+            for (int y=0; y<MainController.testTypes.get(x).getTests().size()-1; y++){
                 MedicalTestType type = MainController.testTypes.get(x);
                 MedicalTestResult result = MainController.testTypes.get(x).getTests().get(y);
             
@@ -101,12 +102,21 @@ public class WarningsAndSuggestionsController implements Initializable{
                     result.setFlag(Flag.green);
                 } else if (result.getScore()<=type.getYellowMaximumScore() && result.getScore()>= type.getYellowMinimumScore()){
                     result.setFlag(Flag.yellow);
+                        if (x==0){
+                            txtSuggestions.appendText("Due to calcium levels being off, it is reconmended to either reduce/increase dairy intake.");
+                            
+                        }
                     txtYellow.setText("Yellow Zone: " + testTypes.get(x) +"\n");
                 } else {
                     result.setFlag(Flag.red);
-                    txtRed.setText("Red Zone: " + testTypes.get(x) +"\n");
+                    if (x==0){
+                            txtSuggestions.appendText("Due to calcium levels being extreme, see your doctor as cancer is posible.");
+                            
+                        }
+                    txtRed.setText("Red Zone: " +testTypes.get(x) +"\n");
                 }
             }
-        }   
+     }
     }
+ 
 }
