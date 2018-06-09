@@ -14,7 +14,7 @@
       <Rectangle fx:id="rectangle4" arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutY="372.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <Rectangle fx:id="rectangle3" arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="29.0" layoutX="387.0" layoutY="186.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="398.0" />
       <TextArea fx:id="txtYellow" layoutX="40.0" layoutY="108.0" prefHeight="130.0" prefWidth="252.0" wrapText="true" />
-      <TextArea fx:id="txtSuggestions" layoutX="292.0" layoutY="108.0" prefHeight="249.0" prefWidth="259.0" />
+      <TextArea fx:id="txtSuggestions" layoutX="292.0" layoutY="108.0" prefHeight="249.0" prefWidth="259.0" wrapText="true" />
       <Button fx:id="btnBack" layoutX="67.0" layoutY="374.0" mnemonicParsing="false" text="Back" />
       <Button fx:id="btnSearch" layoutX="167.0" layoutY="374.0" mnemonicParsing="false" text="Search" />
       <Label fx:id="label4" layoutX="171.0" layoutY="26.0" text="Warnings and Suggestions">

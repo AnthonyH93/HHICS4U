@@ -8,6 +8,7 @@ package FXMLControllers;
 
 import MainClasses.MainClass;
 import MainClasses.MainScreen;
+import MainClasses.RegisterScreen;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -111,8 +112,16 @@ public class RegisterScreenController implements Initializable {
             
                 } catch (IOException e) {
                     try {
+                        
                         username = userNameField.getText();
                         password = passwordField.getText();
+                        
+                        File dir = new File("src/DataStorage/XMLFiles/" + username);
+                        try {
+                            dir.mkdir();
+                        } catch (SecurityException s) {
+                            s.printStackTrace();
+                        }
                         
                         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
                         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
@@ -143,8 +152,8 @@ public class RegisterScreenController implements Initializable {
                 } catch (ParserConfigurationException ex) {
                     Logger.getLogger(RegisterScreenController.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                RegisterScreen.close();
             }
-            
         });
         
     }
