@@ -29,7 +29,7 @@
         <YellowMaximumScore>4.6</YellowMaximumScore>
     </TestType>
     <TestType>
-        <Name>Platlets (mL)</Name>
+        <Name>Platelets (mL)</Name>
         <GreenMinimumScore>150000.0</GreenMinimumScore>
         <GreenMaximumScore>400000.0</GreenMaximumScore>
         <YellowMinimumScore>100000.0</YellowMinimumScore>

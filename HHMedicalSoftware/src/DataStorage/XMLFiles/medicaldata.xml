@@ -2,28 +2,7 @@
 <MedicalData>
     <TestEntry>
         <Type>Calcium (mg/dL)</Type>
-        <Tests>
-            <Test>
-                <Date>01/01/01</Date>
-                <Score>4</Score>
-            </Test>
-            <Test>
-                <Date>02/01/01</Date>
-                <Score>3</Score>
-            </Test>
-            <Test>
-                <Date>01/02/01</Date>
-                <Score>5</Score>
-            </Test>
-            <Test>
-                <Date>03/01/02</Date>
-                <Score>9</Score>
-            </Test>
-            <Test>
-                <Date>02/02/02</Date>
-                <Score>9</Score>
-            </Test>
-        </Tests>
+        <Tests/>
     </TestEntry>
     <TestEntry>
         <Type>Chloride (mEq/L)</Type>
@@ -47,7 +26,7 @@
         <Tests/>
     </TestEntry>
     <TestEntry>
-        <Type>Platlets (mL)</Type>
+        <Type>Platelets (mL)</Type>
         <Tests/>
     </TestEntry>
     <TestEntry>
@@ -56,7 +35,12 @@
     </TestEntry>
     <TestEntry>
         <Type>RBC (million cmm)</Type>
-        <Tests/>
+        <Tests>
+            <Test>
+                <Date>01/01/01</Date>
+                <Score>9000</Score>
+            </Test>
+        </Tests>
     </TestEntry>
     <TestEntry>
         <Type>Sodium (mEq/L)</Type>
@@ -64,7 +48,12 @@
     </TestEntry>
     <TestEntry>
         <Type>Sugar (mg/dL)</Type>
-        <Tests/>
+        <Tests>
+            <Test>
+                <Date>01/01/01</Date>
+                <Score>1</Score>
+            </Test>
+        </Tests>
     </TestEntry>
     <TestEntry>
         <Type>WBC (per ccm)</Type>
