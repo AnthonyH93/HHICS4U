@@ -57,6 +57,10 @@ public class MainClass extends Application {
             }
         });
     }
+    
+    public static void closeLogin () {
+        stage.close();
+    }
 
     /**
      * @param args the command line arguments

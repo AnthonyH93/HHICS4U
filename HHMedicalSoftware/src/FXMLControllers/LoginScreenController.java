@@ -113,6 +113,7 @@ public class LoginScreenController implements Initializable {
                     if (password.equals(pass.item(0).getTextContent())) {
                         MainClass.currentUsername = username;
                         new MainScreen();
+                        MainClass.closeLogin();
                     } else {
                         outputLabel.setText("Incorrect Password");
                     }
@@ -124,7 +125,6 @@ public class LoginScreenController implements Initializable {
                     Logger.getLogger(LoginScreenController.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-            
         });
         
         registerButton.setOnAction(new EventHandler<ActionEvent> () {

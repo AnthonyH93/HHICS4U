@@ -13,6 +13,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -101,22 +103,21 @@ public class RegisterScreenController implements Initializable {
         registerButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
-                try {
-            
-                    DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
-                    DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-                    Document doc = docBuilder.parse(new File("src/DataStorage/XMLFiles/" + username + "/userdata.xml"));
-                    doc.getDocumentElement().normalize();
+                
+                username = userNameField.getText();
+                password = passwordField.getText();
+                
+                File dir = new File("src/DataStorage/XMLFiles/" + username);
+                File testTemplate = new File("src/DataStorage/XMLFiles/testtypesTemplate.xml");
+                File medicaldataTemplate = new File("src/DataStorage/XMLFiles/medicaldataTemplate.xml");
+                
+                if (dir.exists()) {
                     
                     outputLabel.setText("This User Already Exists");
             
-                } catch (IOException e) {
+                } else {
                     try {
-                        
-                        username = userNameField.getText();
-                        password = passwordField.getText();
-                        
-                        File dir = new File("src/DataStorage/XMLFiles/" + username);
+
                         try {
                             dir.mkdir();
                         } catch (SecurityException s) {
@@ -139,6 +140,10 @@ public class RegisterScreenController implements Initializable {
                             transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
                     
                             transformer.transform(new DOMSource (doc), new StreamResult(new FileOutputStream("src/DataStorage/XMLFiles/" + username + "/userdata.xml")));
+                            
+                            Files.copy(testTemplate.toPath(), dir.toPath().resolve("testtypes.xml"), StandardCopyOption.REPLACE_EXISTING);
+                            Files.copy(medicaldataTemplate.toPath(), dir.toPath().resolve("medicaldata.xml"), StandardCopyOption.REPLACE_EXISTING);
+                            
                         } catch (IOException i) {
                             i.printStackTrace();
                         } catch (TransformerException ex) {
@@ -147,10 +152,8 @@ public class RegisterScreenController implements Initializable {
                     } catch (ParserConfigurationException ex) {
                         Logger.getLogger(RegisterScreenController.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } catch (SAXException ex) {
-                    Logger.getLogger(RegisterScreenController.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (ParserConfigurationException ex) {
-                    Logger.getLogger(RegisterScreenController.class.getName()).log(Level.SEVERE, null, ex);
+                    
+                    
                 }
                 RegisterScreen.close();
             }

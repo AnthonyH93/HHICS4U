@@ -10,6 +10,7 @@ import DataTypes.Date;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
 import FXMLControllers.MainController;
+import MainClasses.MainClass;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -46,7 +47,7 @@ public class FileManager {
         try {
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse(new File("src/DataStorage/XMLFiles/testtypes.xml"));
+            Document doc = docBuilder.parse(new File("src/DataStorage/XMLFiles/" + MainClass.currentUsername + "/testtypes.xml"));
             doc.getDocumentElement().normalize();
             
             NodeList testTypeList = doc.getElementsByTagName("TestType");
@@ -69,7 +70,7 @@ public class FileManager {
         try {
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse(new File("src/DataStorage/XMLFiles/medicaldata.xml"));
+            Document doc = docBuilder.parse(new File("src/DataStorage/XMLFiles/" + MainClass.currentUsername + "/medicaldata.xml"));
             doc.getDocumentElement().normalize();
             
             NodeList testTypeList = doc.getElementsByTagName("TestEntry");
@@ -150,7 +151,7 @@ public class FileManager {
                     transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
                     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
                     
-                    transformer.transform(new DOMSource (doc), new StreamResult(new FileOutputStream("src/DataStorage/XMLFiles/medicaldata.xml")));
+                    transformer.transform(new DOMSource (doc), new StreamResult(new FileOutputStream("src/DataStorage/XMLFiles/" + MainClass.currentUsername + "/medicaldata.xml")));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -202,7 +203,7 @@ public class FileManager {
                     transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
                     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
                     
-                    transformer.transform(new DOMSource (doc), new StreamResult(new FileOutputStream("src/DataStorage/XMLFiles/testtypes.xml")));
+                    transformer.transform(new DOMSource (doc), new StreamResult(new FileOutputStream("src/DataStorage/XMLFiles/" + MainClass.currentUsername + "/testtypes.xml")));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
