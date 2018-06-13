@@ -2,12 +2,7 @@
 <MedicalData>
     <TestEntry>
         <Type>Calcium (mg/dL)</Type>
-        <Tests>
-            <Test>
-                <Date>01/01/01</Date>
-                <Score>1</Score>
-            </Test>
-        </Tests>
+        <Tests/>
     </TestEntry>
     <TestEntry>
         <Type>Calcium (mg/dL)</Type>
@@ -20,12 +15,7 @@
     </TestEntry>
     <TestEntry>
         <Type>Chloride (mEq/L)</Type>
-        <Tests>
-            <Test>
-                <Date>01/01/01</Date>
-                <Score>1</Score>
-            </Test>
-        </Tests>
+        <Tests/>
     </TestEntry>
     <TestEntry>
         <Type>Chloride (mEq/L)</Type>
@@ -38,16 +28,7 @@
     </TestEntry>
     <TestEntry>
         <Type>Hemoglobin (g/dL)</Type>
-        <Tests>
-            <Test>
-                <Date>01/01/01</Date>
-                <Score>11</Score>
-            </Test>
-            <Test>
-                <Date>05/09/03</Date>
-                <Score>12</Score>
-            </Test>
-        </Tests>
+        <Tests/>
     </TestEntry>
     <TestEntry>
         <Type>Hemoglobin (g/dL)</Type>
@@ -64,12 +45,7 @@
     </TestEntry>
     <TestEntry>
         <Type>Phosphorus (mg/dL)</Type>
-        <Tests>
-            <Test>
-                <Date>01/01/01</Date>
-                <Score>2</Score>
-            </Test>
-        </Tests>
+        <Tests/>
     </TestEntry>
     <TestEntry>
         <Type>Phosphorus (mg/dL)</Type>
@@ -98,12 +74,7 @@
     </TestEntry>
     <TestEntry>
         <Type>RBC (million cmm)</Type>
-        <Tests>
-            <Test>
-                <Date>01/01/01</Date>
-                <Score>9000</Score>
-            </Test>
-        </Tests>
+        <Tests/>
     </TestEntry>
     <TestEntry>
         <Type>RBC (million cmm)</Type>
@@ -124,12 +95,7 @@
     </TestEntry>
     <TestEntry>
         <Type>Sugar (mg/dL)</Type>
-        <Tests>
-            <Test>
-                <Date>01/01/01</Date>
-                <Score>1</Score>
-            </Test>
-        </Tests>
+        <Tests/>
     </TestEntry>
     <TestEntry>
         <Type>Sugar (mg/dL)</Type>
