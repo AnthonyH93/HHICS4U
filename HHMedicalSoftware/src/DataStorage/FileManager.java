@@ -29,19 +29,9 @@ import org.w3c.dom.NodeList;
 /**
  *  File Name: SaveFile
  *  Date: May 15, 2018
- *  Description:
+ *  Description: This file handles all of the opening and saving of data to the disks.
  */
 public class FileManager {
-    
-    private static Element name;
-    private static Element comment;
-    private static Element greenMinimumScore;
-    private static Element greenMaximumScore;
-    private static Element yellowMinimumScore;
-    private static Element yellowMaximumScore;
-    private static Element date;
-    private static Element score;
-    
     public static void open () {
         
         try {

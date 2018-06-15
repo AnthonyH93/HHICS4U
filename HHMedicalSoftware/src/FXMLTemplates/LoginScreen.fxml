@@ -43,7 +43,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <Label fx:id="outputLabel">
+                        <Label fx:id="outputLabel" text="Please Login or Register A New Account">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>

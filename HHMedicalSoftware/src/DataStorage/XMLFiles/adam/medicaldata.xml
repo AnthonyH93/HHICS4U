@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MedicalData>
+    <TestEntry>
+        <Type>Calcium (mg/dL)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>Chloride (mEq/L)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>Hemoglobin (g/dL)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>Phosphorus (mg/dL)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>Platelets (mL)</Type>
+        <Tests>
+            <Test>
+                <Date>22/11/22</Date>
+                <Score>33</Score>
+            </Test>
+        </Tests>
+    </TestEntry>
+    <TestEntry>
+        <Type>Potassium (mEq/L)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>RBC (million cmm)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>Sodium (mEq/L)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>Sugar (mg/dL)</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
+        <Type>WBC (per ccm)</Type>
+        <Tests/>
+    </TestEntry>
+</MedicalData>

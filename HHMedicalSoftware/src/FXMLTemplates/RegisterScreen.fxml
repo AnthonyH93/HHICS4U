@@ -43,7 +43,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <Label fx:id="outputLabel">
+                        <Label fx:id="outputLabel" text="Please Enter The Information Below To Register">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
@@ -102,6 +102,5 @@
             </Pane>
          </center>
       </BorderPane>
-      <Label text="Label" />
    </children>
 </VBox>

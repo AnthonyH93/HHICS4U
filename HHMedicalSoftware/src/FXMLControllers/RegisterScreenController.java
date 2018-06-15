@@ -40,8 +40,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
 /**
  *  File Name: LoginScreenController
@@ -111,7 +109,9 @@ public class RegisterScreenController implements Initializable {
                 File testTemplate = new File("src/DataStorage/XMLFiles/testtypesTemplate.xml");
                 File medicaldataTemplate = new File("src/DataStorage/XMLFiles/medicaldataTemplate.xml");
                 
-                if (dir.exists()) {
+                if (username.equals("") || password.equals("")) {
+                    outputLabel.setText("You Cannot Leave This Field Blank");
+                } else if (dir.exists()) {
                     
                     outputLabel.setText("This User Already Exists");
             
@@ -153,9 +153,9 @@ public class RegisterScreenController implements Initializable {
                         Logger.getLogger(RegisterScreenController.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     
-                    
+                    RegisterScreen.close();
                 }
-                RegisterScreen.close();
+                
             }
         });
         
