@@ -29,6 +29,13 @@
         <YellowMaximumScore>4.6</YellowMaximumScore>
     </TestType>
     <TestType>
+        <Name>Pineapple</Name>
+        <GreenMinimumScore>34.0</GreenMinimumScore>
+        <GreenMaximumScore>0.0</GreenMaximumScore>
+        <YellowMinimumScore>0.0</YellowMinimumScore>
+        <YellowMaximumScore>0.0</YellowMaximumScore>
+    </TestType>
+    <TestType>
         <Name>Platelets (mL)</Name>
         <GreenMinimumScore>150000.0</GreenMinimumScore>
         <GreenMaximumScore>400000.0</GreenMaximumScore>

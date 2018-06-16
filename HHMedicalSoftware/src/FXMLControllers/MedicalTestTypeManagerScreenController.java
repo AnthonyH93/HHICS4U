@@ -30,6 +30,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.util.StringConverter;
 
 /**
  *  File Name: MedicalTestTypeManagerScreenController
@@ -54,7 +55,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
     private Pane topBarPane;
 
     @FXML
-    private TableColumn<MedicalTestType, Integer> greenMinimumColumn;
+    private TableColumn<MedicalTestType, Double> greenMinimumColumn;
 
     @FXML
     private Label titleLabel;
@@ -66,7 +67,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
     private ImageView logoView;
 
     @FXML
-    private TableColumn<MedicalTestType, Integer> yellowMaximumColumn;
+    private TableColumn<MedicalTestType, Double> yellowMaximumColumn;
 
     @FXML
     private Button cancelButton;
@@ -75,19 +76,19 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
     private TableColumn<MedicalTestType, String> nameColumn;
 
     @FXML
-    private TableColumn<MedicalTestType, Integer> greenMaximumColumn;
+    private TableColumn<MedicalTestType, Double> greenMaximumColumn;
 
     @FXML
-    private TableColumn<MedicalTestType, Integer> yellowMinimumColumn;
+    private TableColumn<MedicalTestType, Double> yellowMinimumColumn;
 
     @FXML
-    private TableColumn<MedicalTestType, Integer> greenColumn;
+    private TableColumn<MedicalTestType, Double> greenColumn;
 
     @FXML
     private VBox tableContainer;
 
     @FXML
-    private TableColumn<MedicalTestType, Integer> yellowColumn;
+    private TableColumn<MedicalTestType, Double> yellowColumn;
 
     @FXML
     private TableView<MedicalTestType> testTypeTable;
@@ -109,6 +110,54 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
        
         /* Make the cells text fields */
         nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        greenMinimumColumn.setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<Double> () {
+            @Override
+            public String toString(Double object) {
+                return object.toString();
+            }
+
+            @Override
+            public Double fromString(String string) {
+                return Double.parseDouble(string);
+            }
+            
+        }));
+        yellowMaximumColumn.setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<Double> () {
+            @Override
+            public String toString(Double object) {
+                return object.toString();
+            }
+
+            @Override
+            public Double fromString(String string) {
+                return Double.parseDouble(string);
+            }
+            
+        }));
+        greenMaximumColumn.setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<Double> () {
+            @Override
+            public String toString(Double object) {
+                return object.toString();
+            }
+
+            @Override
+            public Double fromString(String string) {
+                return Double.parseDouble(string);
+            }
+            
+        }));
+        yellowMinimumColumn.setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<Double> () {
+            @Override
+            public String toString(Double object) {
+                return object.toString();
+            }
+
+            @Override
+            public Double fromString(String string) {
+                return Double.parseDouble(string);
+            }
+            
+        }));
         
         /* When the column has been edited and the user pressed enter, set the cell to this new value */
         nameColumn.setOnEditCommit(
@@ -120,7 +169,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
         
         /* When the column has been edited and the user pressed enter, set the cell to this new value */
         greenMinimumColumn.setOnEditCommit(
-                (TableColumn.CellEditEvent<MedicalTestType, Integer> t) ->
+                (TableColumn.CellEditEvent<MedicalTestType, Double> t) ->
                     ( t.getTableView().getItems().get(
                             t.getTablePosition().getRow())
                     ).setGreenMinimumScore(t.getNewValue())
@@ -128,7 +177,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
         
         /* When the column has been edited and the user pressed enter, set the cell to this new value */
         greenMaximumColumn.setOnEditCommit(
-                (TableColumn.CellEditEvent<MedicalTestType, Integer> t) ->
+                (TableColumn.CellEditEvent<MedicalTestType, Double> t) ->
                     ( t.getTableView().getItems().get(
                             t.getTablePosition().getRow())
                     ).setGreenMaximumScore(t.getNewValue())
@@ -136,7 +185,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
         
         /* When the column has been edited and the user pressed enter, set the cell to this new value */
         yellowMinimumColumn.setOnEditCommit(
-                (TableColumn.CellEditEvent<MedicalTestType, Integer> t) ->
+                (TableColumn.CellEditEvent<MedicalTestType, Double> t) ->
                     ( t.getTableView().getItems().get(
                             t.getTablePosition().getRow())
                     ).setYellowMinimumScore(t.getNewValue())
@@ -144,7 +193,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
         
         /* When the column has been edited and the user pressed enter, set the cell to this new value */
         yellowMinimumColumn.setOnEditCommit(
-                (TableColumn.CellEditEvent<MedicalTestType, Integer> t) ->
+                (TableColumn.CellEditEvent<MedicalTestType, Double> t) ->
                     ( t.getTableView().getItems().get(
                             t.getTablePosition().getRow())
                     ).setYellowMaximumScore(t.getNewValue())
@@ -154,13 +203,13 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
         nameColumn.setCellValueFactory(
                 new PropertyValueFactory<MedicalTestType, String>("name"));
         greenMinimumColumn.setCellValueFactory(
-                new PropertyValueFactory<MedicalTestType, Integer>("greenMinimumScore"));
+                new PropertyValueFactory<MedicalTestType, Double>("greenMinimumScore"));
         greenMaximumColumn.setCellValueFactory(
-                new PropertyValueFactory<MedicalTestType, Integer>("greenMaximumScore"));
+                new PropertyValueFactory<MedicalTestType, Double>("greenMaximumScore"));
         yellowMinimumColumn.setCellValueFactory(
-                new PropertyValueFactory<MedicalTestType, Integer>("yellowMinimumScore"));
+                new PropertyValueFactory<MedicalTestType, Double>("yellowMinimumScore"));
         yellowMaximumColumn.setCellValueFactory(
-                new PropertyValueFactory<MedicalTestType, Integer>("yellowMaximumScore"));
+                new PropertyValueFactory<MedicalTestType, Double>("yellowMaximumScore"));
         
         /* Set the table to editable */
         testTypeTable.setEditable(true);

@@ -17,6 +17,10 @@
         <Tests/>
     </TestEntry>
     <TestEntry>
+        <Type>Pineapple</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
         <Type>Platelets (mL)</Type>
         <Tests/>
     </TestEntry>
