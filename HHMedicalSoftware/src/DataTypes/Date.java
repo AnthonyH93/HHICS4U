@@ -44,6 +44,7 @@ public class Date {
         return string.toString();
     }
     
+    /* Returns the date in a purely integer format for comparison purposes */
     public int toInt () {
         int comp = year * 10000 + month * 100 + day;
         return comp;

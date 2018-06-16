@@ -18,8 +18,9 @@ import javafx.stage.Stage;
  *  File Name: RegisterScreen
  *  Programmer: 
  *  Date: Jun 6, 2018
- *  Description:
+ *  Description: This file handles the opening and closing of the register screen.s
  */
+
 public class RegisterScreen {
     static Stage stage;
     

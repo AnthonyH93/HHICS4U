@@ -5,10 +5,8 @@
  */
 package DataTypes;
 
-/**
- *
- * @author Noah
- */
+/* Enumerator is used to hold the three possible states of the flag */
+
 public enum Flag {
     green, yellow, red
 }

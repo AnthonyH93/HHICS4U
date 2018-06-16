@@ -10,8 +10,8 @@ import DataTypes.Date;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
 import MainClasses.InputMedicalTestResultScreen;
-import MainClasses.InputMedicalTestTypeScreen;  
 import MainClasses.MainClass;
+import MainClasses.MedicalTestTypeManagerScreen;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -35,9 +35,11 @@ import javafx.scene.layout.VBox;
  *  File Name: MedicalTestTypeManagerScreenController
  *  Programmer: 
  *  Date: May 23, 2018
- *  Description:
+ *  Description: This screen allows the user to add or delete test types in the program.
  */
 public class MedicalTestTypeManagerScreenController implements Initializable{
+    
+    /* Inject all FXML elements */
     
     @FXML
     private VBox mainContainer;
@@ -98,13 +100,17 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
     @FXML
     private Button deleteButton;
 
+    /* Initialize the elements */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
+        /* Create an observable array list that is equal to the main array */
         tests = FXCollections.observableArrayList(MainController.testTypes);
-        nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
        
+        /* Make the cells text fields */
+        nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         
+        /* When the column has been edited and the user pressed enter, set the cell to this new value */
         nameColumn.setOnEditCommit(
                 (TableColumn.CellEditEvent<MedicalTestType, String> t) ->
                     ( t.getTableView().getItems().get(
@@ -112,6 +118,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
                     ).setName(t.getNewValue())
                 );
         
+        /* When the column has been edited and the user pressed enter, set the cell to this new value */
         greenMinimumColumn.setOnEditCommit(
                 (TableColumn.CellEditEvent<MedicalTestType, Integer> t) ->
                     ( t.getTableView().getItems().get(
@@ -119,6 +126,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
                     ).setGreenMinimumScore(t.getNewValue())
                 );
         
+        /* When the column has been edited and the user pressed enter, set the cell to this new value */
         greenMaximumColumn.setOnEditCommit(
                 (TableColumn.CellEditEvent<MedicalTestType, Integer> t) ->
                     ( t.getTableView().getItems().get(
@@ -126,6 +134,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
                     ).setGreenMaximumScore(t.getNewValue())
                 );
         
+        /* When the column has been edited and the user pressed enter, set the cell to this new value */
         yellowMinimumColumn.setOnEditCommit(
                 (TableColumn.CellEditEvent<MedicalTestType, Integer> t) ->
                     ( t.getTableView().getItems().get(
@@ -133,6 +142,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
                     ).setYellowMinimumScore(t.getNewValue())
                 );
         
+        /* When the column has been edited and the user pressed enter, set the cell to this new value */
         yellowMinimumColumn.setOnEditCommit(
                 (TableColumn.CellEditEvent<MedicalTestType, Integer> t) ->
                     ( t.getTableView().getItems().get(
@@ -140,6 +150,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
                     ).setYellowMaximumScore(t.getNewValue())
                 );
         
+        /* Set each cell value to the property it corresponds to in the test type object */
         nameColumn.setCellValueFactory(
                 new PropertyValueFactory<MedicalTestType, String>("name"));
         greenMinimumColumn.setCellValueFactory(
@@ -151,16 +162,20 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
         yellowMaximumColumn.setCellValueFactory(
                 new PropertyValueFactory<MedicalTestType, Integer>("yellowMaximumScore"));
         
+        /* Set the table to editable */
         testTypeTable.setEditable(true);
+        
+        /* Set the table items to the tests */
         testTypeTable.setItems(tests);
         
+        /* When the submit button is pressed get data from the table and set the main array to it */
         submitButton.setOnAction(new EventHandler<ActionEvent> () {
                 @Override
                 public void handle(ActionEvent event) {
                     tests = testTypeTable.getItems();
                     MainController.testTypes.clear();
                     MainController.testTypes.addAll(tests);
-                    InputMedicalTestTypeScreen.close();
+                    MedicalTestTypeManagerScreen.close();
                     MainClass.controller.updateData();
                 }
                 
@@ -186,7 +201,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
         cancelButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
-                InputMedicalTestTypeScreen.close();
+                MedicalTestTypeManagerScreen.close();
             }  
         });
     }

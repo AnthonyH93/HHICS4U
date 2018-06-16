@@ -20,9 +20,11 @@ import javafx.beans.property.SimpleStringProperty;
 
 public  class MedicalTestType {
 
-    /* Define properties that a test type must have including
+    /* 
+     * Define properties that a test type must have including
      * a name, description and an array to store the different tests
     */
+    
     private final SimpleStringProperty name;
     private final SimpleDoubleProperty greenMinimumScore;
     private final SimpleDoubleProperty greenMaximumScore;
@@ -31,7 +33,7 @@ public  class MedicalTestType {
     
     private ArrayList<MedicalTestResult> tests = new ArrayList<MedicalTestResult>();
 
-    /* Define a constructor to give values to properties */
+    /* Define a constructor to give values to properties except test array */
     public MedicalTestType(String name, double greenMinimumScore, double greenMaximumScore, double yellowMinimumScore, double yellowMaximumScore) {
         this.name = new SimpleStringProperty(name);
         this.greenMinimumScore = new SimpleDoubleProperty(greenMinimumScore);
@@ -40,6 +42,7 @@ public  class MedicalTestType {
         this.yellowMaximumScore = new SimpleDoubleProperty(yellowMaximumScore);
     }
     
+    /* Define a constructor that also allows for the direct creation of the array list of tests */
     public MedicalTestType(String name, double greenMinimumScore, double greenMaximumScore, double yellowMinimumScore, double yellowMaximumScore, ArrayList<MedicalTestResult> tests) {
         this.name = new SimpleStringProperty(name);
         this.greenMinimumScore = new SimpleDoubleProperty(greenMinimumScore);
@@ -49,6 +52,7 @@ public  class MedicalTestType {
         this.tests = tests;
     }
 
+    /* Define setter methods */
     public void setName (String n) {
         name.set(n);
     }
@@ -95,6 +99,7 @@ public  class MedicalTestType {
         return name.getValue();
     }
 
+    /* Define getter methods */
     public double getGreenMinimumScore() {
         return greenMinimumScore.get();
     }
@@ -111,6 +116,7 @@ public  class MedicalTestType {
         return yellowMaximumScore.get();
     }
     
+    /* Define method that will sort the tests in the array using a selection sort algorithm */
     public void sortTests () {
         for (int i = 0; i < tests.size() - 1; i++) {
                 for (int j = i + 1; j < tests.size(); j++) {

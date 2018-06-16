@@ -42,11 +42,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 /**
- *  File Name: LoginScreenController
+ *  File Name: RegisterScreenController
  *  Date: Jun 6, 2018
- *  Description:
+ *  Description: This screen handles registering the user.
  */
 public class RegisterScreenController implements Initializable {
+    
+    /* Inject all FXML elements */
     
     @FXML
     private ImageView backgroundImage;
@@ -93,22 +95,29 @@ public class RegisterScreenController implements Initializable {
     @FXML
     private Label outputLabel;
     
+    /* Create two variables to hold the username and password */
     String password;
     String username;
     
+    
+    /* Initilize the components */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        /* This code is run when the register button is clicked */
         registerButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
                 
+                /* Retrieve the username and passoword and store them into memory */
                 username = userNameField.getText();
                 password = passwordField.getText();
                 
+                /* Create the paths that are to be used to store the user's information */
                 File dir = new File("src/DataStorage/XMLFiles/" + username);
                 File testTemplate = new File("src/DataStorage/XMLFiles/testtypesTemplate.xml");
                 File medicaldataTemplate = new File("src/DataStorage/XMLFiles/medicaldataTemplate.xml");
                 
+                /* If the username or password is blank or directory is already in use alert user, else proceed */
                 if (username.equals("") || password.equals("")) {
                     outputLabel.setText("You Cannot Leave This Field Blank");
                 } else if (dir.exists()) {
@@ -117,30 +126,36 @@ public class RegisterScreenController implements Initializable {
             
                 } else {
                     try {
-
+                        /* Try to create the folder for the user data, catch security exception */
                         try {
                             dir.mkdir();
                         } catch (SecurityException s) {
                             s.printStackTrace();
                         }
                         
+                        /* Create a new document to hold the password */
                         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
                         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
                         Document doc = docBuilder.newDocument();
                         
+                        /* Create the password element */
                         Element pass = doc.createElement("Password");
                         pass.setTextContent(password);
                         doc.appendChild(pass);
                         
+                        /* Surround with try-catch to catch IO errors */
                         try {
+                            /* Set XML format */
                             Transformer transformer = TransformerFactory.newInstance().newTransformer();
                             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
                             transformer.setOutputProperty(OutputKeys.METHOD, "xml");
                             transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
                             transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
                     
+                            /* Output the XML file to the new folder */
                             transformer.transform(new DOMSource (doc), new StreamResult(new FileOutputStream("src/DataStorage/XMLFiles/" + username + "/userdata.xml")));
                             
+                            /* Copy the test type and medical data empty xml templates for the user folder */
                             Files.copy(testTemplate.toPath(), dir.toPath().resolve("testtypes.xml"), StandardCopyOption.REPLACE_EXISTING);
                             Files.copy(medicaldataTemplate.toPath(), dir.toPath().resolve("medicaldata.xml"), StandardCopyOption.REPLACE_EXISTING);
                             
@@ -153,6 +168,7 @@ public class RegisterScreenController implements Initializable {
                         Logger.getLogger(RegisterScreenController.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     
+                    /* Close the screen when done */
                     RegisterScreen.close();
                 }
                 

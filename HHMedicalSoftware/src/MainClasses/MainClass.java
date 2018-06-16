@@ -21,7 +21,7 @@ import javafx.stage.WindowEvent;
  *  File Name: MainClass
  *  Date: May 11, 2018
  *  Description: This file is the main class of the program and loads the
- *  main screen when the program is started.
+ *  login screen when the program is started.
  */
 
 public class MainClass extends Application {
@@ -44,20 +44,9 @@ public class MainClass extends Application {
         primaryStage.show();
         
         stage = primaryStage;
-        
-        //controller = loader.getController();
-        
-        //FileManager.open();
-        //controller.updateData();
-        
-        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent> () {
-            @Override
-            public void handle(WindowEvent event) {
-                FileManager.save();
-            }
-        });
     }
     
+    /* Close the login screen */
     public static void closeLogin () {
         stage.close();
     }

@@ -36,9 +36,11 @@ import org.xml.sax.SAXException;
 /**
  *  File Name: LoginScreenController
  *  Date: Jun 6, 2018
- *  Description:
+ *  Description: This program handles all of the login functions.
  */
 public class LoginScreenController implements Initializable {
+    
+    /* Inject all FXML elements */
     
     @FXML
     private Button enterButton;
@@ -88,36 +90,43 @@ public class LoginScreenController implements Initializable {
     @FXML
     private Label outputLabel;
     
+    /* Create two temporary strings to hold username and password */
     String password;
     String username;
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
-        
-        
+        /* Create function to play when enter button is clicked */
         enterButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("pressed");
+                /* Surround with try-catch statement to catch all IO errors */
                 try {
+                    /* Retreieve username and password from text fields */
                     username = userNameField.getText();
                     password = passwordField.getText();
             
+                    /* Create a new document to retrieve the password from the data storage */
                     DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
                     DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
                     Document doc = docBuilder.parse(new File("src/DataStorage/XMLFiles/" + username + "/userdata.xml"));
                     doc.getDocumentElement().normalize();
             
+                    /* Find the password element in the userdata file */
                     NodeList pass = doc.getElementsByTagName("Password");
+                    
+                    /* If the password matches then open main screen and load files under that username */
                     if (password.equals(pass.item(0).getTextContent())) {
                         MainClass.currentUsername = username;
                         new MainScreen();
                         MainClass.closeLogin();
                     } else {
+                        /* Else alert user the password is incorrect */
                         outputLabel.setText("Incorrect Password");
                     }
                 } catch (IOException e) {
+                    /* If the files cannot be found then the user does not exist */
                     outputLabel.setText("This Username Does Not Exist");
                 } catch (SAXException ex) {
                     Logger.getLogger(LoginScreenController.class.getName()).log(Level.SEVERE, null, ex);
@@ -127,6 +136,7 @@ public class LoginScreenController implements Initializable {
             }
         });
         
+        /* If user wants to register open the register screen */
         registerButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {

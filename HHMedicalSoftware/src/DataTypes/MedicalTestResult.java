@@ -17,6 +17,8 @@ public class MedicalTestResult {
     /* Create class for medical test results that contains the date and the score */
     private Date date;
     private int score;
+    
+    /* Create a new flag to hold zone the result falls under */
     private Flag flag;
 
     /* Constructor that requires a date and score */
@@ -38,6 +40,7 @@ public class MedicalTestResult {
         return flag;
     }
     
+    /* Define setter methods */
     public void setFlag(Flag flag) {
         this.flag = flag;
     }
@@ -47,6 +50,11 @@ public class MedicalTestResult {
     public String toString() {
         return date.toString();
     }
+    
+    /* 
+        Uses the integer formats of the dates to compare them. Returns true if
+        the test result used to call function is larger than the parameter.
+    */
     
     public boolean compareDates (MedicalTestResult e) {
         int firstDate = date.toInt();

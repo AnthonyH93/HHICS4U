@@ -120,7 +120,7 @@ public class MainController implements Initializable{
     private Pane bottomPane;
 
     @FXML
-    private Button addMedicalTestTypeButton;
+    private Button medicalTestTypeManagerButton;
     
     @FXML
     private Button addMedicalTestResultButton;
@@ -164,23 +164,29 @@ public class MainController implements Initializable{
     @FXML
     private Button btnOpenDefinitions;
     
+    /* Create the main array to hold all of the test types of the program */
     public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
+    
+    /* Create two variables to hold the current test and result that have been selected */
     public static MedicalTestType selectedTest = null;
     public static MedicalTestResult selectedResult = null;
     
     /* Initialize the components */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        /* Set the medical data list view to show all of the test types */
         medicalDataListView.getItems().setAll(testTypes);
-        //testDateListView.getItems().setAll(selectedTest.getTests());
-        addMedicalTestTypeButton.setOnAction(new EventHandler<ActionEvent> () {
+        
+        medicalTestTypeManagerButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
-                MedicalFunctions.addMedicalTestType();
+                MedicalFunctions.openMedicalTestTypeManager();
                 updateData();
             }
             
         });
+        
+        /* When add medical test button is pressed open add medical test window and update the data */
         addMedicalTestResultButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
@@ -189,6 +195,8 @@ public class MainController implements Initializable{
             }
             
         });
+        
+        /* When delete medical test button is pressed find the selected test and remove it from the array */
         deleteMedicalTestResultButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
@@ -197,6 +205,8 @@ public class MainController implements Initializable{
             }
             
         });
+        
+        /* When save button is pressed call the save function in FileManager class */
         saveButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
@@ -204,21 +214,24 @@ public class MainController implements Initializable{
             }
             
         });
+        
+        /* When warning screen button is pressed open the warning screen */
         btnLaunchWarningsScreen.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
                 MedicalFunctions.openWarningsScreen();
             }
         });
+        
+        /* When the definitions button is pressed open the definitions screen */
          btnOpenDefinitions.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
                 MedicalFunctions.openDefinitionsScreen();
             }
         });
-                
-                
-                
+
+        /* When the close button is pressed save the data and close the program */
         btnCloseProgram.setOnAction(new EventHandler<ActionEvent>() { 
             @Override
             public void handle(ActionEvent event) {
@@ -226,6 +239,8 @@ public class MainController implements Initializable{
                 MainScreen.close();
             }     
         }); 
+        
+        /* Whent the sort button is pressed call the sort arrays function and update the data */
         sortButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
@@ -235,16 +250,17 @@ public class MainController implements Initializable{
         });
     }
     
-    /* Update list view with current array */
+    /* Update the test type list view with current array */
     public void updateMedicalTestTypeList () {
         medicalDataListView.getItems().setAll(testTypes);
     }
+    
+    /* Update the result list view with current arrays */
     public void updateMedicalTestResultList () {
         try {
             testDateListView.getItems().setAll(selectedTest.getTests());
-            updateChart();
-        } catch (NullPointerException n) {
-            System.out.print("User has not created any results yet.");
+        } catch (NullPointerException e) {
+            System.out.println("User has not selected a test yet.");
         }
     }
     
@@ -272,8 +288,12 @@ public class MainController implements Initializable{
         updateTestResultBox();
     }
 
+    /* This function updates the text box with the information of the current selected test */
     private void updateTestResultBox() {
+        
+        /* Surround with try-catch to catch null pointer if a test has not been selected by user */
         try {
+            /* Create a string with all information */
             StringBuilder output = new StringBuilder();
             output.append("Test:         " + selectedTest.getName());
             output.append("\n");
@@ -281,17 +301,22 @@ public class MainController implements Initializable{
             output.append("\n\n");
             output.append("Score:        " + selectedResult.getScore());
         
+            /* Output string to text area */
             testResultTextArea.setText(output.toString());
         } catch (NullPointerException e) {
             System.out.println("Result has not been selected.");
         }
     }
     
+    /* This function sorts all of the arrays in the main array */
     public void sortArrays () {
+        /* Loop through all of the test types within the main array */
         for (int i = 0; i < testTypes.size(); i++) {
             
+            /* Call each test type's sort function to sort the tests within them */
             testTypes.get(i).sortTests();
             
+                /* Use a selection sort algorithm to sort the test types in alphabetical order */
                 for (int j = i + 1; j < testTypes.size(); j++) {
                     if (testTypes.get(i).getName().compareToIgnoreCase(testTypes.get(j).getName()) > 0) {
                         MedicalTestType temp = testTypes.get(i);
@@ -302,34 +327,23 @@ public class MainController implements Initializable{
             }
     }
     
+    /* This method updates the graph under the text area */
     public void updateChart () {
+        /* Clear the previous chart data and set title to name of selected test */
         testResultChart.getData().clear();
         testResultChart.setTitle(selectedTest.getName());
         
+        /* Set the type of chart data to be an XY series chart */
         XYChart.Series chartData = new XYChart.Series();
         chartData.setName("Result Chart");
         
+        /* Loop through tests of selected test type and add dates to x-axis and scores to y-axis */
         for (int i = 0; i < selectedTest.getTests().size(); i++) {
             chartData.getData().add(new XYChart.Data(selectedTest.getTests().get(i).getDate().toString(), selectedTest.getTests().get(i).getScore()));
         }
         
+        /* Add the data to the chart */
         testResultChart.getData().add(chartData);
-        System.out.println("called");
     }
 }
 
-class resultCell extends ListCell<MedicalTestResult> {
-    @Override
-    protected void updateItem (MedicalTestResult result, boolean empty) {
-        super.updateItem(result, empty);
-        setText(result.toString());
-        if (result.getFlag() == Flag.green) {
-            setTextFill(Color.GREEN);
-        } else if (result.getFlag() == Flag.yellow) {
-            setTextFill(Color.YELLOW);
-        } else {
-            setTextFill(Color.RED);
-        }
-        
-    }
-}

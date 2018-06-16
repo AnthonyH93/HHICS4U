@@ -122,11 +122,14 @@ public class InputMedicalTestResultScreenController implements Initializable {
             }  
         });
         
+        /* Set all of the drop down options to the various test types */
         typeDropList.setItems(FXCollections.observableArrayList(MainController.testTypes));
         
+        /* Add a listener that will trigger the code every time the day text field changes */
         dayTextField.textProperty().addListener(new ChangeListener<String> () {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                /* If the field becomes greater than two characters, reduce it back to two */
                 if (dayTextField.getText().length() > 2) {
                     String old = dayTextField.getText().substring(0, 2);
                     dayTextField.setText(old);
@@ -135,9 +138,11 @@ public class InputMedicalTestResultScreenController implements Initializable {
             
         });
         
+        /* Add a listener that will trigger the code every time the month text field changes */
         monthTextField.textProperty().addListener(new ChangeListener<String> () {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                /* If the field becomes greater than two characters, reduce it back to two */
                 if (monthTextField.getText().length() > 2) {
                     String old = monthTextField.getText().substring(0, 2);
                     monthTextField.setText(old);
@@ -146,9 +151,11 @@ public class InputMedicalTestResultScreenController implements Initializable {
             
         });
         
+        /* Add a listener that will trigger the code every time the year text field changes */
         yearTextField.textProperty().addListener(new ChangeListener<String> () {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                /* If the field becomes greater than two characters, reduce it back to two */
                 if (yearTextField.getText().length() > 2) {
                     String old = yearTextField.getText().substring(0, 2);
                     yearTextField.setText(old);
