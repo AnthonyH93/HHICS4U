@@ -22,6 +22,13 @@ import javafx.scene.shape.Rectangle;
  * and open the template in the editor.
  */
 
+/**
+ *  File Name: WarningsAndSuggestionsController
+ *  Date: June 4, 2018
+ *  Description: This class is the controller for the warnings
+ *  and suggestions FXML file.
+ */
+
 
 
 public class WarningsAndSuggestionsController implements Initializable{
@@ -79,6 +86,7 @@ public class WarningsAndSuggestionsController implements Initializable{
                 WarningsAndSuggestionsScreen.close();
             }  
         });
+        /* When search button is pressed carry out searchArrays method and poulate text areas */
        btnSearch.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {
@@ -87,10 +95,17 @@ public class WarningsAndSuggestionsController implements Initializable{
            
        }
     });
+       /* Initial text exaplaining how the screen works, text is replaced with data once the search button is pressed */
        txtYellow.setText("These textboxes will display all medical data that falls into the respecive yellow or red"
                + " zones. Once the search button is pressed, this text will be removed and updated with red/yellow tests. Green tests don't appear!");
     
-    
+    /* 
+       The search arrays method, this method searches through first each text type, then each test in each type
+       using nested for loops. If statements are then used to decide which zone each test belongs to, yellow or
+       red zone tests are added to the text area, green tests are ignored. The suggestions text area decides which
+       test type is in each zone and uses pregenerated messages to make the user aware of health risks to do with
+       their test results. The text is appended so that multiple warnings can be loaded.
+         */
 }
     public void searchArrays () {
         txtYellow.setText("");
@@ -109,28 +124,28 @@ public class WarningsAndSuggestionsController implements Initializable{
                             if (type.getName().equals("Chloride (mEq/L)")){
                                 txtSuggestions.appendText("Since chloride levels aren't correct, take another blood test after a few weeks and see if it has improved. ");    
                             }       
-                            if (type.equals(2)){
-                                txtSuggestions.appendText("Because of hemoglobin being off, iron levels are also impaired. Reduce of increase iron through red meat or supplements. ");    
+                            if (type.getName().equals("Hemoglobin (g/dL)")){
+                                txtSuggestions.appendText("Because of hemoglobin being off, iron levels are also impaired. Reduce or increase iron through red meat or supplements. ");    
                             }       
-                            if (y==3){
+                            if (type.getName().equals("Phosphorus (mg/dL)")){
                                 txtSuggestions.appendText("Be careful to maintain proper mineral levels since phophorus is slighly off. ");    
                             }       
-                            if (y==4){
+                            if (type.getName().equals("Platelets (mL)")){
                                 txtSuggestions.appendText("Your platelet count isn't correct, see your doctor since worsening of condition could induce fatal bleeding. ");    
                             }        
-                            if (y==5){
+                            if (type.getName().equals("Potassium (mEq/L)")){
                                 txtSuggestions.appendText("Potassium levels are bad, be careful that you are recieving all essential minerals. ");    
                             }        
-                            if (y==6){
+                            if (type.getName().equals("RBC (million cmm)")){
                                 txtSuggestions.appendText("Red blood cell levels are not correct. See your doctor as many serious conditions may not be far away. ");    
                             }       
-                            if (y==7){
+                            if (type.getName().equals("Sodium (mEq/L)")){
                                 txtSuggestions.appendText("Check your diet and eat healthier due to sodium amount in your blood being outside of the green zone. ");    
                             }       
-                            if (y==8){
+                            if (type.getName().equals("Sugar (mg/dL)")){
                                 txtSuggestions.appendText("Check your diet and eat healthier due to sugar amount in your blood being outside of the green zone. ");    
                             }        
-                            if (y==9){
+                            if (type.getName().equals("WBC (per ccm)")){
                                 txtSuggestions.appendText("White blood cell levels are not correct. See your doctor as many serious conditions may not be far away. ");    
                                     
                                 
@@ -165,7 +180,7 @@ public class WarningsAndSuggestionsController implements Initializable{
                                 txtSuggestions.appendText("You must change your diet since sodium levels are extremely wrong! Not changing your diet will lead to condition such as heart disease or obesity. ");    
                             }       
                             if (type.getName().equals("Sugar (mg/dL)")){
-                                txtSuggestions.appendText("You must change your diet since sugar levels are extremely wrong! Not changing your diet will lead to condition such as diabetes or obesity. ");    
+                                txtSuggestions.appendText("You must change your diet since sugar levels are extremely wrong! Not changing your diet will lead to conditions such as diabetes or obesity. ");    
                             }      
                             if (type.getName().equals("WBC (per ccm)")){
                                 txtSuggestions.appendText("White blood cell levels are terribly off. See your doctor many life threatening situations may be looming, such as leukemia. ");    
@@ -174,7 +189,7 @@ public class WarningsAndSuggestionsController implements Initializable{
                     txtRed.appendText("Red Zone: " +testTypes.get(x) +"\n");
                 
                            
-                //Moved all } from between ifs to the end.... worked for yellow but not for red, suggestions still off....   
+                  
             }
      }
     }
