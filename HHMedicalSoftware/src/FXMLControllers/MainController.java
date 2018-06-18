@@ -6,12 +6,16 @@ import DataTypes.Flag;
 import MainClasses.MedicalFunctions;
 import DataTypes.MedicalTestResult;
 import DataTypes.MedicalTestType;
+import MainClasses.HelpScreen;
 import MainClasses.MainClass;
 import MainClasses.MainScreen;
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -164,6 +168,9 @@ public class MainController implements Initializable{
     @FXML
     private Button btnOpenDefinitions;
     
+    @FXML
+    private Button helpButton;
+    
     /* Create the main array to hold all of the test types of the program */
     public static ArrayList<MedicalTestType> testTypes = new ArrayList<MedicalTestType>();
     
@@ -177,6 +184,18 @@ public class MainController implements Initializable{
         /* Set the medical data list view to show all of the test types */
         medicalDataListView.getItems().setAll(testTypes);
         
+        helpButton.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    new HelpScreen();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        
+        /* Open help page when help button is pressed */
         medicalTestTypeManagerButton.setOnAction(new EventHandler<ActionEvent> () {
             @Override
             public void handle(ActionEvent event) {

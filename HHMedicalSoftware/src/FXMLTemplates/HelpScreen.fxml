@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #191919;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLControllers.HelpScreenController">
+   <children>
+      <BorderPane prefHeight="0.0" prefWidth="600.0">
+         <top>
+            <Pane fx:id="topPane" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="logoImageView" fitHeight="51.0" fitWidth="414.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Pane>
+         </top>
+         <center>
+            <Pane fx:id="centerPane" prefHeight="272.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="backgroundImage" fitHeight="326.0" fitWidth="600.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@LoginBackground.png" />
+                     </image>
+                  </ImageView>
+                  <VBox fx:id="centerBox" alignment="CENTER" fillWidth="false" layoutX="40.0" layoutY="34.0" prefHeight="261.0" prefWidth="520.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 3;">
+                     <children>
+                        <Label fx:id="signInLabel" alignment="CENTER" prefHeight="68.0" prefWidth="265.0" text="Help &amp; Support" textAlignment="CENTER">
+                           <font>
+                              <Font name="Cambria" size="31.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox fx:id="userNameBox" prefHeight="0.0" prefWidth="514.0" />
+                        <HBox fx:id="passwordBox" prefHeight="142.0" prefWidth="520.0">
+                           <children>
+                              <TextArea prefHeight="156.0" prefWidth="514.0" style="-fx-background-color: white;" text="For help with running the program or with any of the functions please try reading our user guide at the following link: &#10;&#10;For additional support please contact our customer service at:&#10;Toll-Free: 1-800-000-000&#10;Email: hhmedicalsoftwaresupport@hhsolutions.com" wrapText="true">
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Cambria" size="14.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="buttonBox" prefHeight="25.0" prefWidth="65.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="4.0" />
+                           </VBox.margin>
+                           <children>
+                              <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Close" textAlignment="CENTER" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</VBox>
