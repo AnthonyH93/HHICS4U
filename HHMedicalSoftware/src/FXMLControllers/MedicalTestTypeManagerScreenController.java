@@ -38,6 +38,7 @@ import javafx.util.StringConverter;
  *  Date: May 23, 2018
  *  Description: This screen allows the user to add or delete test types in the program.
  */
+
 public class MedicalTestTypeManagerScreenController implements Initializable{
     
     /* Inject all FXML elements */

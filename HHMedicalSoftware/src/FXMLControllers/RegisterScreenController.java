@@ -95,6 +95,9 @@ public class RegisterScreenController implements Initializable {
     @FXML
     private Label outputLabel;
     
+    @FXML
+    private Button cancelButton;
+    
     /* Create two variables to hold the username and password */
     String password;
     String username;
@@ -175,5 +178,12 @@ public class RegisterScreenController implements Initializable {
             }
         });
         
+        cancelButton.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+                RegisterScreen.close();
+            }
+            
+        });
     }
 }

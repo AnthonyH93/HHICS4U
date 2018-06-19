@@ -13,6 +13,10 @@
         <Tests/>
     </TestEntry>
     <TestEntry>
+        <Type>Iron</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
         <Type>Phosphorus (mg/dL)</Type>
         <Tests/>
     </TestEntry>

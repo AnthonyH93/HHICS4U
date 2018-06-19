@@ -299,9 +299,10 @@ public class MainController implements Initializable{
     public void medicalTestTypeListClicked (MouseEvent event) {
         selectedTest = medicalDataListView.getSelectionModel().getSelectedItem();
         updateMedicalTestResultList();
+        updateChart();
     }
     
-    /* Define handler for when test type list is clicked */
+    /* Define handler for when test result list is clicked */
     public void medicalTestResultListClicked (MouseEvent event) {
         selectedResult = testDateListView.getSelectionModel().getSelectedItem();
         updateTestResultBox();

@@ -4,16 +4,12 @@
         <Type>Calcium (mg/dL)</Type>
         <Tests>
             <Test>
-                <Date>01/01/01</Date>
-                <Score>1</Score>
-            </Test>
-            <Test>
                 <Date>02/03/07</Date>
                 <Score>55</Score>
             </Test>
             <Test>
-                <Date>23/04/23</Date>
-                <Score>33</Score>
+                <Date>12/11/11</Date>
+                <Score>222</Score>
             </Test>
         </Tests>
     </TestEntry>

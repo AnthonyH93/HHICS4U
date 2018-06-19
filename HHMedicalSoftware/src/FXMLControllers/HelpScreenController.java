@@ -7,8 +7,13 @@
 package FXMLControllers;
 
 import MainClasses.HelpScreen;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -27,6 +32,8 @@ public class HelpScreenController implements Initializable {
     @FXML
     private Button closeButton;
 
+    @FXML
+    private Button userGuideButton;
     
     /* Initialize close button to close screen when pressed */
     @Override
@@ -36,6 +43,20 @@ public class HelpScreenController implements Initializable {
             public void handle(ActionEvent event) {
                 HelpScreen.close();
             }
+        });
+        
+        /* Open user guide file when button is pressed */
+        userGuideButton.setOnAction(new EventHandler<ActionEvent> () {
+            @Override
+            public void handle(ActionEvent event) {
+                File userGuide = new File("src/userguideHH.htm");
+                try {
+                    Desktop.getDesktop().browse(userGuide.toURI());
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+            
         });
     }
 }

@@ -46,7 +46,7 @@
                         <HBox fx:id="userNameBox" prefHeight="0.0" prefWidth="514.0" />
                         <HBox fx:id="passwordBox" prefHeight="142.0" prefWidth="520.0">
                            <children>
-                              <TextArea prefHeight="156.0" prefWidth="514.0" style="-fx-background-color: white;" text="For help with running the program or with any of the functions please try reading our user guide at the following link: &#10;&#10;For additional support please contact our customer service at:&#10;Toll-Free: 1-800-000-000&#10;Email: hhmedicalsoftwaresupport@hhsolutions.com" wrapText="true">
+                              <TextArea prefHeight="156.0" prefWidth="514.0" style="-fx-background-color: white;" text="For help with running the program or with any of the functions please try reading our user guide at the button below.&#10;&#10;For additional support please contact our customer service at:&#10;Toll-Free: 1-800-000-000&#10;Email: hhmedicalsoftwaresupport@hhsolutions.com" wrapText="true">
                                  <padding>
                                     <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                                  </padding>
@@ -56,12 +56,17 @@
                               </TextArea>
                            </children>
                         </HBox>
-                        <HBox fx:id="buttonBox" prefHeight="25.0" prefWidth="65.0">
+                        <HBox fx:id="buttonBox" prefHeight="25.0" prefWidth="189.0">
                            <VBox.margin>
                               <Insets bottom="20.0" top="4.0" />
                            </VBox.margin>
                            <children>
                               <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Close" textAlignment="CENTER" />
+                              <Button fx:id="userGuideButton" mnemonicParsing="false" text="User Guide">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Button>
                            </children>
                         </HBox>
                      </children>

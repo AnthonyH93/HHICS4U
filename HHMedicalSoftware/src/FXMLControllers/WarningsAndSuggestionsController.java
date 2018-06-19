@@ -152,7 +152,7 @@ public class WarningsAndSuggestionsController implements Initializable{
                         }
                             
                             
-                    txtYellow.appendText("Yellow Zone: " + testTypes.get(x) +"\n");
+                    txtYellow.appendText("Yellow Zone: " + testTypes.get(x) + " - " + result.toString() +"\n");
                 } else {
                     result.setFlag(Flag.red);
                     if (type.getName().equals("Calcium (mg/dL)")){
@@ -186,7 +186,7 @@ public class WarningsAndSuggestionsController implements Initializable{
                                 txtSuggestions.appendText("White blood cell levels are terribly off. See your doctor many life threatening situations may be looming, such as leukemia. ");    
                                     
                             }         
-                    txtRed.appendText("Red Zone: " +testTypes.get(x) +"\n");
+                    txtRed.appendText("Red Zone: " +testTypes.get(x) + " - " + result.toString() +"\n");
                 
                            
                   

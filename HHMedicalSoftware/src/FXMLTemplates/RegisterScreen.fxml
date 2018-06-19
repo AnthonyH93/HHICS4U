@@ -88,9 +88,13 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <HBox fx:id="buttonBox" prefHeight="25.0" prefWidth="70.0">
+                        <HBox fx:id="buttonBox" prefHeight="25.0" prefWidth="214.0">
                            <children>
-                              <Button fx:id="registerButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Register" />
+                              <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Cancel" />
+                              <Button fx:id="registerButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Register">
+                                 <HBox.margin>
+                                    <Insets left="75.0" />
+                                 </HBox.margin></Button>
                            </children>
                            <VBox.margin>
                               <Insets bottom="20.0" top="4.0" />
