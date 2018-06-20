@@ -62,15 +62,15 @@ public  class MedicalTestType {
     }
     
     public void setGreenMaximumScore (double g) {
-        greenMinimumScore.set(g);
+        greenMaximumScore.set(g);
     }
     
     public void setYellowMinimumScore (double g) {
-        greenMinimumScore.set(g);
+        yellowMinimumScore.set(g);
     }
     
     public void setYellowMaximumScore (double g) {
-        greenMinimumScore.set(g);
+        yellowMaximumScore.set(g);
     }
     
     public void setTests (ArrayList<MedicalTestResult> t) {

@@ -64,6 +64,13 @@
         <YellowMaximumScore>115.0</YellowMaximumScore>
     </TestType>
     <TestType>
+        <Name>test</Name>
+        <GreenMinimumScore>4.0</GreenMinimumScore>
+        <GreenMaximumScore>3.0</GreenMaximumScore>
+        <YellowMinimumScore>2.0</YellowMinimumScore>
+        <YellowMaximumScore>1.0</YellowMaximumScore>
+    </TestType>
+    <TestType>
         <Name>WBC (per ccm)</Name>
         <GreenMinimumScore>4300.0</GreenMinimumScore>
         <GreenMaximumScore>10800.0</GreenMaximumScore>

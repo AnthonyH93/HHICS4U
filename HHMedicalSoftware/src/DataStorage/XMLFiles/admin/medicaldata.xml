@@ -75,6 +75,10 @@
         </Tests>
     </TestEntry>
     <TestEntry>
+        <Type>test</Type>
+        <Tests/>
+    </TestEntry>
+    <TestEntry>
         <Type>WBC (per ccm)</Type>
         <Tests/>
     </TestEntry>

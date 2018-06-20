@@ -111,6 +111,8 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
        
         /* Make the cells text fields */
         nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        
+        
         greenMinimumColumn.setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<Double> () {
             @Override
             public String toString(Double object) {
@@ -160,6 +162,8 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
             
         }));
         
+        
+        
         /* When the column has been edited and the user pressed enter, set the cell to this new value */
         nameColumn.setOnEditCommit(
                 (TableColumn.CellEditEvent<MedicalTestType, String> t) ->
@@ -193,7 +197,7 @@ public class MedicalTestTypeManagerScreenController implements Initializable{
                 );
         
         /* When the column has been edited and the user pressed enter, set the cell to this new value */
-        yellowMinimumColumn.setOnEditCommit(
+        yellowMaximumColumn.setOnEditCommit(
                 (TableColumn.CellEditEvent<MedicalTestType, Double> t) ->
                     ( t.getTableView().getItems().get(
                             t.getTablePosition().getRow())
