@@ -22,13 +22,6 @@
         <YellowMaximumScore>20.0</YellowMaximumScore>
     </TestType>
     <TestType>
-        <Name>Iron</Name>
-        <GreenMinimumScore>12.0</GreenMinimumScore>
-        <GreenMaximumScore>13.0</GreenMaximumScore>
-        <YellowMinimumScore>14.0</YellowMinimumScore>
-        <YellowMaximumScore>15.0</YellowMaximumScore>
-    </TestType>
-    <TestType>
         <Name>Phosphorus (mg/dL)</Name>
         <GreenMinimumScore>2.4</GreenMinimumScore>
         <GreenMaximumScore>4.1</GreenMaximumScore>
