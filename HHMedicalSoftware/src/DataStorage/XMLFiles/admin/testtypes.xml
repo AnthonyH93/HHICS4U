@@ -22,6 +22,13 @@
         <YellowMaximumScore>20.0</YellowMaximumScore>
     </TestType>
     <TestType>
+        <Name>Iron</Name>
+        <GreenMinimumScore>12.0</GreenMinimumScore>
+        <GreenMaximumScore>13.0</GreenMaximumScore>
+        <YellowMinimumScore>14.0</YellowMinimumScore>
+        <YellowMaximumScore>15.0</YellowMaximumScore>
+    </TestType>
+    <TestType>
         <Name>Phosphorus (mg/dL)</Name>
         <GreenMinimumScore>2.4</GreenMinimumScore>
         <GreenMaximumScore>4.1</GreenMaximumScore>
@@ -62,13 +69,6 @@
         <GreenMaximumScore>99.0</GreenMaximumScore>
         <YellowMinimumScore>60.0</YellowMinimumScore>
         <YellowMaximumScore>115.0</YellowMaximumScore>
-    </TestType>
-    <TestType>
-        <Name>test</Name>
-        <GreenMinimumScore>4.0</GreenMinimumScore>
-        <GreenMaximumScore>3.0</GreenMaximumScore>
-        <YellowMinimumScore>2.0</YellowMinimumScore>
-        <YellowMaximumScore>1.0</YellowMaximumScore>
     </TestType>
     <TestType>
         <Name>WBC (per ccm)</Name>
