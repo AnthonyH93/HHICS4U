@@ -1,6 +1,6 @@
 # HHICS4U
 ICS4U ISU Project
-This project was created by 2 students(Anthony Hopkins and Noah Hosein) as a part of
+This project was created by 2 students (Anthony Hopkins and Noah Hosein) as a part of
 an online course on computer science. It was meant to solve the real world problem of 
 tracking and understanding medical data (specifically blood test results). It simulates
 a database using XML and populates it based on individual user profiles (set up
